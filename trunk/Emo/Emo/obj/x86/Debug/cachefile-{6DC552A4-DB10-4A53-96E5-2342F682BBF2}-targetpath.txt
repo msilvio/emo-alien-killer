@@ -1,0 +1,3 @@
+Content\setas.xnb
+Content\telaintro.xnb
+Content\telamenu.xnb

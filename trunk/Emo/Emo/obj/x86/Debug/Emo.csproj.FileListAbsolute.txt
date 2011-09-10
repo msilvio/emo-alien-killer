@@ -1,0 +1,9 @@
+E:\00XNA\Emo\Emo\Emo\Emo\bin\x86\Debug\Emo.exe
+E:\00XNA\Emo\Emo\Emo\Emo\bin\x86\Debug\Emo.pdb
+E:\00XNA\Emo\Emo\Emo\Emo\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\00XNA\Emo\Emo\Emo\Emo\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\00XNA\Emo\Emo\Emo\Emo\obj\x86\Debug\Emo.exe
+E:\00XNA\Emo\Emo\Emo\Emo\obj\x86\Debug\Emo.pdb
+E:\00XNA\Emo\Emo\Emo\Emo\bin\x86\Debug\Content\setas.xnb
+E:\00XNA\Emo\Emo\Emo\Emo\bin\x86\Debug\Content\telaintro.xnb
+E:\00XNA\Emo\Emo\Emo\Emo\bin\x86\Debug\Content\telamenu.xnb
