@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\00XNA\Emo\Emo\Emo\Emo\bin\x86\Debug\Content\setas.xnb</Output>
-      <Time>2011-09-10T20:08:09.4310299-03:00</Time>
+      <Output>C:\Users\Dodrinha\Desktop\emo\Emo\Emo\bin\x86\Debug\Content\setas.xnb</Output>
+      <Time>2011-09-12T01:00:13.9415448-03:00</Time>
     </Item>
     <Item>
       <Source>telaintro.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\00XNA\Emo\Emo\Emo\Emo\bin\x86\Debug\Content\telaintro.xnb</Output>
-      <Time>2011-09-10T20:08:09.4480316-03:00</Time>
+      <Output>C:\Users\Dodrinha\Desktop\emo\Emo\Emo\bin\x86\Debug\Content\telaintro.xnb</Output>
+      <Time>2011-09-12T01:00:13.9465451-03:00</Time>
     </Item>
     <Item>
       <Source>telamenu.png</Source>
@@ -25,8 +25,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\00XNA\Emo\Emo\Emo\Emo\bin\x86\Debug\Content\telamenu.xnb</Output>
-      <Time>2011-09-10T20:08:09.4680336-03:00</Time>
+      <Output>C:\Users\Dodrinha\Desktop\emo\Emo\Emo\bin\x86\Debug\Content\telamenu.xnb</Output>
+      <Time>2011-09-12T01:00:14.0205493-03:00</Time>
+    </Item>
+    <Item>
+      <Source>eddiekillers.png</Source>
+      <Name>eddiekillers</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dodrinha\Desktop\emo\Emo\Emo\bin\x86\Debug\Content\eddiekillers.xnb</Output>
+      <Time>2011-09-12T02:29:40.1844763-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -34,39 +43,39 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>E:\00XNA\Emo\Emo\Emo\EmoContent\</RootDirectory>
-      <LoggerRootDirectory>E:\00XNA\Emo\Emo\Emo\Emo\</LoggerRootDirectory>
-      <IntermediateDirectory>E:\00XNA\Emo\Emo\Emo\EmoContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>E:\00XNA\Emo\Emo\Emo\Emo\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Dodrinha\Desktop\emo\Emo\EmoContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Dodrinha\Desktop\emo\Emo\Emo\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Dodrinha\Desktop\emo\Emo\EmoContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Dodrinha\Desktop\emo\Emo\Emo\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2011-09-08T13:07:04.2724764-03:00</Value>
+        <Value>2011-09-12T01:16:20.9438542-03:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

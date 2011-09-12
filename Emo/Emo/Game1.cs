@@ -19,16 +19,18 @@ namespace Emo
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        Texture2D seta, telaIntroducao, telaMenu;
-        Rectangle seta_destino, seta_origem;
-        int largura, altura, pos_origemX, pos_origemY, pos_destinoX, pos_destinoY;
-        KeyboardState teclado, tecladoAnterior;
+        Texture2D edKillers;
+        BaseHero _eddie;
+        //Texture2D seta, telaIntroducao, telaMenu;
+        //Rectangle seta_destino, seta_origem;
+        //int largura, altura, pos_origemX, pos_origemY, pos_destinoX, pos_destinoY;
+        KeyboardState teclado;
 
-        enum Telas { INTRO, MENU, FASE1, };
+        //enum Telas { INTRO, MENU, FASE1, };
 
-        Telas tela_atual;
+        //Telas tela_atual;
 
-        int frame;
+        //int frame;
 
 
         public Game1()
@@ -46,8 +48,8 @@ namespace Emo
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            frame = 0;
-            tela_atual = Telas.INTRO;
+            //frame = 0;
+            //tela_atual = Telas.INTRO;
             base.Initialize();
         }
 
@@ -59,7 +61,10 @@ namespace Emo
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+           
+            edKillers = Content.Load<Texture2D>("eddiekillers");
+            
+            /*
             seta = Content.Load<Texture2D>("setas");
             largura = seta.Width / 4;
             altura = seta.Height / 2;
@@ -70,6 +75,7 @@ namespace Emo
 
             telaIntroducao = Content.Load<Texture2D>("telaintro");
             telaMenu = Content.Load<Texture2D>("telamenu");
+             * */
         }
 
         /// <summary>
@@ -90,9 +96,28 @@ namespace Emo
         {
             // Allows the game to exit
             teclado = Keyboard.GetState();
+            if (teclado.IsKeyDown(Keys.Left))
+            {
+                _eddie._posX -= 50;
+                if (_eddie._posX < 0)
+                {
+                    _eddie._posX = 0;
+                }
 
+            }
+
+            if (teclado.IsKeyDown(Keys.Right))
+            {
+                _eddie._posX += 50;
+                if (_eddie._posX < 600)
+                {
+                    _eddie._posX = 600 - 127;
+                }
+            }
+            //_eddie.update(teclado);
+            base.Update(gameTime);
             // TODO: Add your update logic here
-
+            /*
             switch (tela_atual)
             {
                 case Telas.INTRO:
@@ -137,6 +162,7 @@ namespace Emo
             seta_destino.X = pos_destinoX;
             seta_origem.X = pos_origemX;
             seta_origem.Y = pos_origemY;
+             * */
         }
 
         /// <summary>
@@ -146,9 +172,10 @@ namespace Emo
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            _eddie = new BaseHero(500, edKillers);
             spriteBatch.Begin();
-
+            _eddie.Draw(spriteBatch);
+            /*
             switch (tela_atual)
             {
                 case Telas.INTRO:
@@ -161,6 +188,7 @@ namespace Emo
                     spriteBatch.Draw(seta, seta_destino, seta_origem, Color.White);
                     break;
             }
+            */
 
             spriteBatch.End();
 
