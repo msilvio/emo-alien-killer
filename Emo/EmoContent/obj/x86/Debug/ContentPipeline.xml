@@ -37,6 +37,15 @@
       <Output>C:\Users\Dodrinha\Desktop\emo\Emo\Emo\bin\x86\Debug\Content\eddiekillers.xnb</Output>
       <Time>2011-09-12T02:29:40.1844763-03:00</Time>
     </Item>
+    <Item>
+      <Source>background.png</Source>
+      <Name>background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Dodrinha\Desktop\emo\Emo\Emo\bin\x86\Debug\Content\background.xnb</Output>
+      <Time>2011-09-12T23:37:12.3268618-03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

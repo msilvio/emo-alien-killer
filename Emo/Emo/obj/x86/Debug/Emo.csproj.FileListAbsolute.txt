@@ -17,3 +17,4 @@ C:\Users\Dodrinha\Desktop\emo\Emo\Emo\obj\x86\Debug\Microsoft.Xna.Framework.Runt
 C:\Users\Dodrinha\Desktop\emo\Emo\Emo\obj\x86\Debug\Emo.exe
 C:\Users\Dodrinha\Desktop\emo\Emo\Emo\obj\x86\Debug\Emo.pdb
 C:\Users\Dodrinha\Desktop\emo\Emo\Emo\bin\x86\Debug\Content\eddiekillers.xnb
+C:\Users\Dodrinha\Desktop\emo\Emo\Emo\bin\x86\Debug\Content\background.xnb
