@@ -21,6 +21,7 @@ namespace Emo
 
         Texture2D edKillers;
         BaseHero _eddie;
+        Vector2 _posicaoPlayer;
         //Texture2D seta, telaIntroducao, telaMenu;
         //Rectangle seta_destino, seta_origem;
         //int largura, altura, pos_origemX, pos_origemY, pos_destinoX, pos_destinoY;
@@ -50,6 +51,7 @@ namespace Emo
             // TODO: Add your initialization logic here
             //frame = 0;
             //tela_atual = Telas.INTRO;
+            _eddie = new BaseHero();
             base.Initialize();
         }
 
@@ -63,7 +65,8 @@ namespace Emo
             spriteBatch = new SpriteBatch(GraphicsDevice);
            
             edKillers = Content.Load<Texture2D>("eddiekillers");
-            
+            _posicaoPlayer = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
+            _eddie.Initialize(500,edKillers, _posicaoPlayer,6);
             /*
             seta = Content.Load<Texture2D>("setas");
             largura = seta.Width / 4;
@@ -96,26 +99,10 @@ namespace Emo
         {
             // Allows the game to exit
             teclado = Keyboard.GetState();
-            if (teclado.IsKeyDown(Keys.Left))
-            {
-                _eddie._posX -= 50;
-                if (_eddie._posX < 0)
-                {
-                    _eddie._posX = 0;
-                }
-
-            }
-
-            if (teclado.IsKeyDown(Keys.Right))
-            {
-                _eddie._posX += 50;
-                if (_eddie._posX < 600)
-                {
-                    _eddie._posX = 600 - 127;
-                }
-            }
-            //_eddie.update(teclado);
+            _eddie.update(teclado, gameTime);
             base.Update(gameTime);
+            
+           
             // TODO: Add your update logic here
             /*
             switch (tela_atual)
@@ -172,7 +159,6 @@ namespace Emo
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            _eddie = new BaseHero(500, edKillers);
             spriteBatch.Begin();
             _eddie.Draw(spriteBatch);
             /*
