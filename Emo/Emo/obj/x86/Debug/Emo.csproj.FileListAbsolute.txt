@@ -18,3 +18,16 @@ C:\Users\Dodrinha\Desktop\emo\Emo\Emo\obj\x86\Debug\Emo.exe
 C:\Users\Dodrinha\Desktop\emo\Emo\Emo\obj\x86\Debug\Emo.pdb
 C:\Users\Dodrinha\Desktop\emo\Emo\Emo\bin\x86\Debug\Content\eddiekillers.xnb
 C:\Users\Dodrinha\Desktop\emo\Emo\Emo\bin\x86\Debug\Content\background.xnb
+C:\Users\devs173a\Documents\emo\Emo\Emo\bin\x86\Debug\Content\setas.xnb
+C:\Users\devs173a\Documents\emo\Emo\Emo\bin\x86\Debug\Content\telaintro.xnb
+C:\Users\devs173a\Documents\emo\Emo\Emo\bin\x86\Debug\Content\telamenu.xnb
+C:\Users\devs173a\Documents\emo\Emo\Emo\bin\x86\Debug\Content\eddiekillers.xnb
+C:\Users\devs173a\Documents\emo\Emo\Emo\bin\x86\Debug\Content\background.xnb
+C:\Users\devs173a\Documents\emo\Emo\Emo\bin\x86\Debug\Content\eddiekillerscolors.xnb
+C:\Users\devs173a\Documents\emo\Emo\Emo\bin\x86\Debug\Emo.exe
+C:\Users\devs173a\Documents\emo\Emo\Emo\bin\x86\Debug\Emo.pdb
+C:\Users\devs173a\Documents\emo\Emo\Emo\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\devs173a\Documents\emo\Emo\Emo\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\devs173a\Documents\emo\Emo\Emo\obj\x86\Debug\Emo.exe
+C:\Users\devs173a\Documents\emo\Emo\Emo\obj\x86\Debug\Emo.pdb
+C:\Users\devs173a\Documents\emo\Emo\Emo\bin\x86\Debug\Content\axe-sprite.xnb
