@@ -14,16 +14,23 @@ namespace Emo
     {
         private int _health;
 
+        private Texture2D _healthBar;
+
         public int Healths{
             get { return _health; }
             set {_health = value; }
         }
 
-        public void Init() {}
+        public Health(Texture2D _healthBar) 
+        {
+            this._healthBar = _healthBar;
+        }
+
+
+        public void Init() {
+        }
 
         public void Update() { }
-
-        public void () {}
 
         public void Draw() {}
     }
