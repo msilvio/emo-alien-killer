@@ -17,9 +17,9 @@ namespace Emo
         private Texture2D _textura;
         private int _moveSpeed;
         public Vector2 _posicao;
-        public void Initialize(int hp,Texture2D textura, Vector2 posicao, int ms){
+        public void Initialize(int hp,Texture2D textura, Texture2D _healthBar, Vector2 posicao, int ms){
 
-            _heroHealth = new Health();
+            _heroHealth = new Health(_healthBar);
             _heroHealth.Healths = hp;
             _textura = textura;
             _posicao = posicao;

@@ -66,7 +66,12 @@ namespace Emo
            
             edKillers = Content.Load<Texture2D>("eddiekillers");
             _posicaoPlayer = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
-            _eddie.Initialize(500,edKillers, _posicaoPlayer,6);
+            _eddie.Initialize(
+                500,
+                edKillers,
+                Content.Load<Texture2D>("eddiekillers"),
+                _posicaoPlayer, 6);
+
             /*
             seta = Content.Load<Texture2D>("setas");
             largura = seta.Width / 4;
