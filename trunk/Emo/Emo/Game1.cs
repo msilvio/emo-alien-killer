@@ -63,13 +63,15 @@ namespace Emo
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-           
-            edKillers = Content.Load<Texture2D>("eddiekillers");
+
+            //edKillers = Content.Load<Texture2D>("eddiekillers");
+
+            edKillers = Content.Load<Texture2D>("eddie1");
             _posicaoPlayer = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
             _eddie.Initialize(
                 500,
                 edKillers,
-                Content.Load<Texture2D>("eddiekillers"),
+                Content.Load<Texture2D>("eddie1"),
                 _posicaoPlayer, 6);
 
             /*
@@ -106,7 +108,12 @@ namespace Emo
             teclado = Keyboard.GetState();
             _eddie.update(teclado, gameTime);
             base.Update(gameTime);
-            
+
+
+            if (teclado.IsKeyDown(Keys.Escape))
+            {
+                this.Exit(); // Teclar Escape para saída do jogo
+            }
            
             // TODO: Add your update logic here
             /*
