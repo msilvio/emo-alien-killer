@@ -51,6 +51,10 @@ namespace Emo
             // TODO: Add your initialization logic here
             //frame = 0;
             //tela_atual = Telas.INTRO;
+
+            Window.Title = "Emo Alien Killer";
+            IsMouseVisible = false;
+
             _eddie = new BaseHero();
             base.Initialize();
         }
