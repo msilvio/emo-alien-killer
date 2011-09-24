@@ -2,3 +2,4 @@ E:\00XNA\Emo\Emo\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Dodrinha\Desktop\emo\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\devs173a\Documents\emo\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
 K:\Seven\00XNA\19-09-11\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache

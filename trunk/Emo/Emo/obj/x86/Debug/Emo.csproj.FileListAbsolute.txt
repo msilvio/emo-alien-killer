@@ -45,3 +45,17 @@ K:\Seven\00XNA\19-09-11\Emo\Emo\obj\x86\Debug\Microsoft.Xna.Framework.RuntimePro
 K:\Seven\00XNA\19-09-11\Emo\Emo\obj\x86\Debug\Emo.exe
 K:\Seven\00XNA\19-09-11\Emo\Emo\obj\x86\Debug\Emo.pdb
 K:\Seven\00XNA\19-09-11\Emo\Emo\bin\x86\Debug\Content\eddie1.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\setas.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\telaintro.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\telamenu.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\eddiekillers.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\background.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\eddiekillerscolors.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\axe-sprite.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\eddie1.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Emo.exe
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Emo.pdb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\obj\x86\Debug\Emo.exe
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\obj\x86\Debug\Emo.pdb

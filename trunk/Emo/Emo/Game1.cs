@@ -22,6 +22,16 @@ namespace Emo
         Texture2D edKillers;
         BaseHero _eddie;
         Vector2 _posicaoPlayer;
+        KeyboardState tecladoAnterior;
+
+        enum Telas 
+        {
+            INTRO, MENU, FASE1
+        };
+
+        Telas tela_atual = Telas.INTRO;
+        Texture2D telaIntro;
+        Texture2D telaMenu;
         //Texture2D seta, telaIntroducao, telaMenu;
         //Rectangle seta_destino, seta_origem;
         //int largura, altura, pos_origemX, pos_origemY, pos_destinoX, pos_destinoY;
@@ -78,6 +88,8 @@ namespace Emo
                 Content.Load<Texture2D>("eddie1"),
                 _posicaoPlayer, 6);
 
+            telaIntro = Content.Load<Texture2D>("telaintro");
+            telaMenu = Content.Load<Texture2D>("telamenu");
             /*
             seta = Content.Load<Texture2D>("setas");
             largura = seta.Width / 4;
@@ -110,17 +122,14 @@ namespace Emo
         {
             // Allows the game to exit
             teclado = Keyboard.GetState();
-            _eddie.update(teclado, gameTime);
-            base.Update(gameTime);
-
-
+            
             if (teclado.IsKeyDown(Keys.Escape))
             {
                 this.Exit(); // Teclar Escape para saída do jogo
             }
            
             // TODO: Add your update logic here
-            /*
+            
             switch (tela_atual)
             {
                 case Telas.INTRO:
@@ -136,13 +145,14 @@ namespace Emo
                     }
                     break;
                 case Telas.FASE1:
-                    this.Fase1();
+                    _eddie.update(teclado, gameTime);
+            
                     break;
             }
             tecladoAnterior = teclado;
             base.Update(gameTime);
         }
-
+/*
         public void Fase1()
         {
             if (teclado.IsKeyDown(Keys.Left))
@@ -166,7 +176,7 @@ namespace Emo
             seta_origem.X = pos_origemX;
             seta_origem.Y = pos_origemY;
              * */
-        }
+        
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -176,21 +186,20 @@ namespace Emo
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
-            _eddie.Draw(spriteBatch);
-            /*
+            
             switch (tela_atual)
             {
                 case Telas.INTRO:
-                    spriteBatch.Draw(telaIntroducao, Vector2.Zero, Color.White);
+                    spriteBatch.Draw(telaIntro, Vector2.Zero, Color.White);
                     break;
                 case Telas.MENU:
                     spriteBatch.Draw(telaMenu, Vector2.Zero, Color.White);
                     break;
                 case Telas.FASE1:
-                    spriteBatch.Draw(seta, seta_destino, seta_origem, Color.White);
+                    _eddie.Draw(spriteBatch);
                     break;
             }
-            */
+            
 
             spriteBatch.End();
 
