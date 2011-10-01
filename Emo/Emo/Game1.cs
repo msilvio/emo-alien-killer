@@ -24,12 +24,14 @@ namespace Emo
         Vector2 _posicaoPlayer;
         KeyboardState tecladoAnterior;
 
+        Animation machado;
+
         enum Telas 
         {
             INTRO, MENU, FASE1
         };
 
-        Telas tela_atual = Telas.INTRO;
+        Telas tela_atual = Telas.FASE1; //Telas tela_atual = Telas.INTRO;
         Texture2D telaIntro;
         Texture2D telaMenu;
         //Texture2D seta, telaIntroducao, telaMenu;
@@ -66,6 +68,9 @@ namespace Emo
             IsMouseVisible = false;
 
             _eddie = new BaseHero();
+
+            machado = new Animation();
+
             base.Initialize();
         }
 
@@ -90,6 +95,12 @@ namespace Emo
 
             telaIntro = Content.Load<Texture2D>("telaintro");
             telaMenu = Content.Load<Texture2D>("telamenu");
+
+            Texture2D textura_Axe = Content.Load<Texture2D>("axe-sprite");
+            // machado.Initialize(textura_Axe, new Vector2(150.0f, 230.0f), 42, 42, 4, 90, Color.White, 1.0f, true);
+            machado.Initialize(textura_Axe, new Vector2(100.0f, 100.0f), 42, 42, 4, 90, Color.White, 1.0f, true);
+
+            
             /*
             seta = Content.Load<Texture2D>("setas");
             largura = seta.Width / 4;
@@ -146,10 +157,13 @@ namespace Emo
                     break;
                 case Telas.FASE1:
                     _eddie.update(teclado, gameTime);
+                    machado.Update(gameTime);
             
                     break;
             }
             tecladoAnterior = teclado;
+            
+
             base.Update(gameTime);
         }
 /*
@@ -197,8 +211,11 @@ namespace Emo
                     break;
                 case Telas.FASE1:
                     _eddie.Draw(spriteBatch);
+                    machado.Draw(spriteBatch);
+
                     break;
             }
+
             
 
             spriteBatch.End();

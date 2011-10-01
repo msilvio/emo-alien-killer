@@ -59,3 +59,17 @@ C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\obj\x86\Debug\ResolveAssembly
 C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\obj\x86\Debug\Emo.exe
 C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\obj\x86\Debug\Emo.pdb
+E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\setas.xnb
+E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\telaintro.xnb
+E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\telamenu.xnb
+E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\eddiekillers.xnb
+E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\background.xnb
+E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\eddiekillerscolors.xnb
+E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\axe-sprite.xnb
+E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\eddie1.xnb
+E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Emo.exe
+E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Emo.pdb
+E:\00XNA\01-10-11\Emo\Emo\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\00XNA\01-10-11\Emo\Emo\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\00XNA\01-10-11\Emo\Emo\obj\x86\Debug\Emo.exe
+E:\00XNA\01-10-11\Emo\Emo\obj\x86\Debug\Emo.pdb
