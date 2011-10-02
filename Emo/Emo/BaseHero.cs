@@ -49,6 +49,20 @@ namespace Emo
             sb.Draw(_textura, seta_destino, seta_origem, Color.White);
         }
 
+        private void HandleGamepadInput(GamePadState gamePadState)
+        {
+            this._posicao +=
+                new Vector2(
+                    gamePadState.ThumbSticks.Left.X * 4,
+                    -gamePadState.ThumbSticks.Left.Y * 4);
+            if (gamePadState.Buttons.A == ButtonState.Pressed)
+            {
+                //Fire(true);
+            }
+            if (gamePadState.Buttons.LeftShoulder == ButtonState.Pressed) { _moveSpeed = 5; }
+        }
+
+
         public void update(KeyboardState kbs,GameTime gt) 
         {
 
@@ -94,6 +108,7 @@ namespace Emo
             seta_origem.X = pos_origemX;
             seta_origem.Y = pos_origemY;
 
+            HandleGamepadInput(GamePad.GetState(PlayerIndex.One));
 
         }
     }

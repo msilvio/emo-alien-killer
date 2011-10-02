@@ -23,6 +23,7 @@ namespace Emo
         BaseHero _eddie;
         Vector2 _posicaoPlayer;
         KeyboardState tecladoAnterior;
+        Texture2D fundo;
 
         Animation machado;
 
@@ -95,10 +96,12 @@ namespace Emo
 
             telaIntro = Content.Load<Texture2D>("telaintro");
             telaMenu = Content.Load<Texture2D>("telamenu");
+            fundo = Content.Load<Texture2D>("Fundo_Fase01");
 
             Texture2D textura_Axe = Content.Load<Texture2D>("axe-sprite");
             // machado.Initialize(textura_Axe, new Vector2(150.0f, 230.0f), 42, 42, 4, 90, Color.White, 1.0f, true);
             machado.Initialize(textura_Axe, new Vector2(100.0f, 100.0f), 42, 42, 4, 90, Color.White, 1.0f, true);
+
 
             
             /*
@@ -132,6 +135,10 @@ namespace Emo
         protected override void Update(GameTime gameTime)
         {
             // Allows the game to exit
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+                this.Exit();
+
+
             teclado = Keyboard.GetState();
             
             if (teclado.IsKeyDown(Keys.Escape))
@@ -190,7 +197,6 @@ namespace Emo
             seta_origem.X = pos_origemX;
             seta_origem.Y = pos_origemY;
              * */
-        
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -210,8 +216,11 @@ namespace Emo
                     spriteBatch.Draw(telaMenu, Vector2.Zero, Color.White);
                     break;
                 case Telas.FASE1:
+                    //spriteBatch.Draw(fundo, Vector2.Zero, Color.White);
+                    spriteBatch.Draw(fundo, Vector2.Zero, null, Color.White, 0.0f, Vector2.Zero, 2.1f, SpriteEffects.None, 1.0f);
                     _eddie.Draw(spriteBatch);
                     machado.Draw(spriteBatch);
+
 
                     break;
             }
