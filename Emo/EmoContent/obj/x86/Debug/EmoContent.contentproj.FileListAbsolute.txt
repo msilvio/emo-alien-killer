@@ -5,3 +5,4 @@ K:\Seven\00XNA\19-09-11\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.ca
 C:\Users\devs173a\Desktop\emo-alien-killer\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
 E:\00XNA\01-10-11\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
 K:\Seven\00XNA\01-10-11\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
+K:\Seven\00XNA\02-10-11\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache

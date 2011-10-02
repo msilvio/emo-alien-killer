@@ -24,6 +24,13 @@ namespace Emo
         Vector2 _posicaoPlayer;
         KeyboardState tecladoAnterior;
         Texture2D fundo;
+        bool onPlay = false;
+
+        TimeSpan previusSpawnTime;
+        TimeSpan fireTime;
+        TimeSpan previousFireTime;
+
+        List<ShotManager> shots;
 
         Animation machado;
 
@@ -71,6 +78,11 @@ namespace Emo
             _eddie = new BaseHero();
 
             machado = new Animation();
+
+            shots = new List<ShotManager>();
+
+            fireTime = TimeSpan.FromSeconds(.15f);
+            previusSpawnTime = TimeSpan.Zero;
 
             base.Initialize();
         }
@@ -165,14 +177,46 @@ namespace Emo
                 case Telas.FASE1:
                     _eddie.update(teclado, gameTime);
                     machado.Update(gameTime);
+                    onPlay = true;
+                    if (gameTime.TotalGameTime - previousFireTime > fireTime)
+                    {
+                        previousFireTime = gameTime.TotalGameTime;
+                        if (_eddie.Tiro == true && onPlay == true) // if (player.Tiro == true) 
+                        {
+                            //laserSound.Play();
+                            AddBullet(_eddie._posicao + new Vector2(170, 0));
+                        }
+                    }
             
                     break;
             }
             tecladoAnterior = teclado;
-            
+            UpdateBullet();
 
             base.Update(gameTime);
         }
+
+        private void AddBullet(Vector2 position)
+        {
+            ShotManager shot = new ShotManager();
+            shot.Init(GraphicsDevice.Viewport, machado.spriteStrip, position);
+            shots.Add(shot);
+        }
+
+        private void UpdateBullet()
+        {
+            for (int i = shots.Count - 1; i >= 0; i--)
+            {
+                shots[i].Update();
+
+                if (shots[i].Active == false)
+                {
+                    shots.RemoveAt(i);
+                }
+            }
+        }
+
+
 /*
         public void Fase1()
         {
@@ -220,6 +264,12 @@ namespace Emo
                     spriteBatch.Draw(fundo, Vector2.Zero, null, Color.White, 0.0f, Vector2.Zero, 2.1f, SpriteEffects.None, 1.0f);
                     _eddie.Draw(spriteBatch);
                     machado.Draw(spriteBatch);
+
+                    for (int i = 0; i < shots.Count; i++)
+                    {
+                        shots[i].Draw(spriteBatch);
+                        
+                    }
 
 
                     break;

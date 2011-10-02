@@ -15,7 +15,7 @@ namespace Emo
     class Animation
     {
         // The image representing the collection of images used for animation
-        Texture2D spriteStrip;
+        public Texture2D spriteStrip;
 
 
         // The scale used to display the sprite strip
