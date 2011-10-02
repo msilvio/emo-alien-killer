@@ -18,6 +18,7 @@ namespace Emo
         private int _moveSpeed;
         Rectangle seta_destino, seta_origem;
         public Vector2 _posicao;
+        public bool Tiro;
 
         //public int largura, altura, pos_origem
         public int largura, altura, pos_origemX, pos_origemY, pos_destinoX, pos_destinoY, frame;
@@ -49,6 +50,11 @@ namespace Emo
             sb.Draw(_textura, seta_destino, seta_origem, Color.White);
         }
 
+        public void Fire(bool onShot)
+        {
+            Tiro = onShot;
+        }
+
         private void HandleGamepadInput(GamePadState gamePadState)
         {
             this._posicao +=
@@ -57,9 +63,9 @@ namespace Emo
                     -gamePadState.ThumbSticks.Left.Y * 4);
             if (gamePadState.Buttons.A == ButtonState.Pressed)
             {
-                //Fire(true);
+                Fire(true);
             }
-            if (gamePadState.Buttons.LeftShoulder == ButtonState.Pressed) { _moveSpeed = 5; }
+            //if (gamePadState.Buttons.LeftShoulder == ButtonState.Pressed) { _moveSpeed = 5; }
         }
 
 
@@ -92,6 +98,9 @@ namespace Emo
                 else
                     frame = 0;
             }
+
+            if (kbs.IsKeyDown(Keys.Space)) { Fire(true); }
+            if (kbs.IsKeyUp(Keys.Space)) { Fire(false); }
 
             //_posicao.X = MathHelper.Clamp(_posicao.X, 0, 800 - _textura.Width);
             //_posicao.Y = MathHelper.Clamp(_posicao.Y, 0, 600 - _textura.Height);

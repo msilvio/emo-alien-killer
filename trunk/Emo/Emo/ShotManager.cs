@@ -10,6 +10,7 @@ namespace Emo
     class ShotManager
     {
         public Texture2D Texture;
+        private Animation texture_Anim;
         public Vector2 Position;
         public bool Active;
         public int Damage;
@@ -26,7 +27,7 @@ namespace Emo
             get { return Texture.Height; }
         }
 
-        public void Init(Viewport viewport,Texture2D texture, Vector2 position) 
+        public void Init(Viewport viewport, Texture2D texture, Vector2 position)
         {
             Texture = texture;
             Position = position;
@@ -36,6 +37,16 @@ namespace Emo
             bulletMoveSpeed = 20.0f;
         }
 
+        public void Init(Viewport viewport, Animation _textura_Anim, Vector2 position)
+        {
+            //Texture = texture;
+            texture_Anim = _textura_Anim;
+            Position = position;
+            this.viewport = viewport;
+            Active = true;
+            Damage = 5;
+            bulletMoveSpeed = 20.0f;
+        }
         public void Update() 
         {
             Position.X += bulletMoveSpeed;
