@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\setas.xnb</Output>
+      <Output>K:\Seven\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\setas.xnb</Output>
       <Time>2011-10-01T17:54:04.1441672-03:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\telaintro.xnb</Output>
+      <Output>K:\Seven\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\telaintro.xnb</Output>
       <Time>2011-10-01T17:54:04.2221697-03:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\telamenu.xnb</Output>
+      <Output>K:\Seven\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\telamenu.xnb</Output>
       <Time>2011-10-01T17:54:04.2845717-03:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\eddiekillers.xnb</Output>
+      <Output>K:\Seven\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\eddiekillers.xnb</Output>
       <Time>2011-10-01T17:54:04.1753682-03:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\background.xnb</Output>
+      <Output>K:\Seven\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\background.xnb</Output>
       <Time>2011-10-01T17:54:04.1285667-03:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\eddiekillerscolors.xnb</Output>
+      <Output>K:\Seven\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\eddiekillerscolors.xnb</Output>
       <Time>2011-10-01T17:54:04.2377702-03:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\axe-sprite.xnb</Output>
+      <Output>K:\Seven\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\axe-sprite.xnb</Output>
       <Time>2011-10-01T17:54:04.1909687-03:00</Time>
     </Item>
     <Item>
@@ -70,8 +70,17 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\eddie1.xnb</Output>
+      <Output>K:\Seven\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\eddie1.xnb</Output>
       <Time>2011-10-01T17:54:04.2945721-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Fundo_Fase01.png</Source>
+      <Name>Fundo_Fase01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>K:\Seven\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase01.xnb</Output>
+      <Time>2011-10-01T20:27:18.0618251-03:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -79,10 +88,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>E:\00XNA\01-10-11\Emo\EmoContent\</RootDirectory>
-      <LoggerRootDirectory>E:\00XNA\01-10-11\Emo\Emo\</LoggerRootDirectory>
-      <IntermediateDirectory>E:\00XNA\01-10-11\Emo\EmoContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>E:\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>K:\Seven\00XNA\01-10-11\Emo\EmoContent\</RootDirectory>
+      <LoggerRootDirectory>K:\Seven\00XNA\01-10-11\Emo\Emo\</LoggerRootDirectory>
+      <IntermediateDirectory>K:\Seven\00XNA\01-10-11\Emo\EmoContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>K:\Seven\00XNA\01-10-11\Emo\Emo\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -111,7 +120,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2011-09-08T13:07:04.2724764-03:00</Value>
+        <Value>2011-02-22T21:46:11.9889594-03:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
