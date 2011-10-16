@@ -21,18 +21,14 @@ namespace Emo
         // The scale used to display the sprite strip
         float scale;
 
-
         // The time since we last updated the frame
         int elapsedTime;
-
 
         // The time we display a frame until the next one
         int frameTime;
 
-
         // The number of frames that the animation contains
         int frameCount;
-
 
         // The index of the current frame we are displaying
         int currentFrame;
@@ -49,13 +45,12 @@ namespace Emo
 
         public bool Active;
 
-
         public bool Looping;
        
         public Vector2 Position;
 
 
-        public void Initialize(Texture2D texture, Vector2 position,
+        public Animation (Texture2D texture, Vector2 position,
                                  int frameWidth, int frameHeight, int frameCount,
                                 int frametime, Color color, float scale, bool looping)
         {
@@ -65,7 +60,6 @@ namespace Emo
             this.frameCount = frameCount;
             this.frameTime = frametime;
             this.scale = scale;
-
 
             Looping = looping;
             Position = position;

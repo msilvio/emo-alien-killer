@@ -30,7 +30,7 @@ namespace Emo
         TimeSpan fireTime;
         TimeSpan previousFireTime;
 
-        List<ShotManager> shots;
+        List<Shoot> shoots;
 
         Animation machado;
 
@@ -42,17 +42,8 @@ namespace Emo
         Telas tela_atual = Telas.FASE1; //Telas tela_atual = Telas.INTRO;
         Texture2D telaIntro;
         Texture2D telaMenu;
-        //Texture2D seta, telaIntroducao, telaMenu;
-        //Rectangle seta_destino, seta_origem;
-        //int largura, altura, pos_origemX, pos_origemY, pos_destinoX, pos_destinoY;
+
         KeyboardState teclado;
-
-        //enum Telas { INTRO, MENU, FASE1, };
-
-        //Telas tela_atual;
-
-        //int frame;
-
 
         public Game1()
         {
@@ -77,9 +68,7 @@ namespace Emo
 
             _eddie = new BaseHero();
 
-            machado = new Animation();
-
-            shots = new List<ShotManager>();
+            shoots = new List<Shoot>();
 
             fireTime = TimeSpan.FromSeconds(.15f);
             previusSpawnTime = TimeSpan.Zero;
@@ -96,10 +85,9 @@ namespace Emo
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            //edKillers = Content.Load<Texture2D>("eddiekillers");
-
             edKillers = Content.Load<Texture2D>("eddie1");
-            _posicaoPlayer = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
+            _posicaoPlayer = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X, 
+                                        GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
             _eddie.Initialize(
                 500,
                 edKillers,
@@ -110,24 +98,6 @@ namespace Emo
             telaMenu = Content.Load<Texture2D>("telamenu");
             fundo = Content.Load<Texture2D>("Fundo_Fase01");
 
-            Texture2D textura_Axe = Content.Load<Texture2D>("axe-sprite");
-            // machado.Initialize(textura_Axe, new Vector2(150.0f, 230.0f), 42, 42, 4, 90, Color.White, 1.0f, true);
-            machado.Initialize(textura_Axe, new Vector2(100.0f, 100.0f), 42, 42, 4, 90, Color.White, 1.0f, true);
-
-
-            
-            /*
-            seta = Content.Load<Texture2D>("setas");
-            largura = seta.Width / 4;
-            altura = seta.Height / 2;
-            seta_destino = new Rectangle(0, 0, largura, altura);
-            pos_origemX = 0;
-            pos_origemY = 0;
-            seta_origem = new Rectangle(pos_origemX, pos_origemY, largura, altura);
-
-            telaIntroducao = Content.Load<Texture2D>("telaintro");
-            telaMenu = Content.Load<Texture2D>("telamenu");
-             * */
         }
 
         /// <summary>
@@ -150,12 +120,12 @@ namespace Emo
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-
+            // Teclar Escape para saída do jogo
             teclado = Keyboard.GetState();
-            
+
             if (teclado.IsKeyDown(Keys.Escape))
             {
-                this.Exit(); // Teclar Escape para saída do jogo
+                this.Exit();
             }
            
             // TODO: Add your update logic here
@@ -176,7 +146,6 @@ namespace Emo
                     break;
                 case Telas.FASE1:
                     _eddie.update(teclado, gameTime);
-                    machado.Update(gameTime);
                     onPlay = true;
                     if (gameTime.TotalGameTime - previousFireTime > fireTime)
                     {
@@ -184,63 +153,44 @@ namespace Emo
                         if (_eddie.Tiro == true && onPlay == true) // if (player.Tiro == true) 
                         {
                             //laserSound.Play();
-                            AddBullet(_eddie._posicao + new Vector2(170, 0));
+                            AddBullet(_eddie._posicao);
                         }
                     }
             
                     break;
             }
             tecladoAnterior = teclado;
-            UpdateBullet();
+            UpdateBullet(gameTime);
 
             base.Update(gameTime);
         }
 
         private void AddBullet(Vector2 position)
         {
-            ShotManager shot = new ShotManager();
-            shot.Init(GraphicsDevice.Viewport, machado.spriteStrip, position);
-            shots.Add(shot);
+            Texture2D textura_Axe = Content.Load<Texture2D>("axe-sprite");
+
+            float meio = _eddie.largura / 2;
+            Shoot shoot = new Shoot(textura_Axe, 
+                                    _eddie._posicao + new Vector2(meio, 0), 
+                                    42, 42, 4, 90, Color.White, 1.0f, true, _eddie.DIREITA); 
+            shoots.Add(shoot);
         }
 
-        private void UpdateBullet()
+        private void UpdateBullet(GameTime gameTime)
         {
-            for (int i = shots.Count - 1; i >= 0; i--)
+            for (int i = shoots.Count - 1; i >= 0; i--)
             {
-                shots[i].Update();
+                shoots[i].Update(gameTime);
 
-                if (shots[i].Active == false)
+                if (shoots[i].Active == false)
                 {
-                    shots.RemoveAt(i);
+                    shoots.RemoveAt(i);
                 }
             }
         }
 
 
-/*
-        public void Fase1()
-        {
-            if (teclado.IsKeyDown(Keys.Left))
-            {
-                pos_origemX = 0;
-                pos_origemY = altura;
-                pos_destinoX -= 2;
-            }
 
-            if (teclado.IsKeyDown(Keys.Right))
-            {
-                pos_origemX = frame * largura;
-                pos_origemY = 0;
-                pos_destinoX += 2;
-                if (frame < 4)
-                    frame++;
-                else
-                    frame = 0;
-            }
-            seta_destino.X = pos_destinoX;
-            seta_origem.X = pos_origemX;
-            seta_origem.Y = pos_origemY;
-             * */
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -260,22 +210,17 @@ namespace Emo
                     spriteBatch.Draw(telaMenu, Vector2.Zero, Color.White);
                     break;
                 case Telas.FASE1:
-                    //spriteBatch.Draw(fundo, Vector2.Zero, Color.White);
-                    spriteBatch.Draw(fundo, Vector2.Zero, null, Color.White, 0.0f, Vector2.Zero, 2.1f, SpriteEffects.None, 1.0f);
+                    spriteBatch.Draw(fundo, Vector2.Zero, null, Color.White, 
+                                    0.0f, Vector2.Zero, 2.1f, SpriteEffects.None, 1.0f);
                     _eddie.Draw(spriteBatch);
-                    machado.Draw(spriteBatch);
 
-                    for (int i = 0; i < shots.Count; i++)
+                    for (int i = 0; i < shoots.Count; i++)
                     {
-                        shots[i].Draw(spriteBatch);
+                        shoots[i].Draw(spriteBatch);
                         
                     }
-
-
                     break;
             }
-
-            
 
             spriteBatch.End();
 

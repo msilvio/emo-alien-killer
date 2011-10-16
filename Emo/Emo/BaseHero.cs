@@ -19,8 +19,7 @@ namespace Emo
         Rectangle seta_destino, seta_origem;
         public Vector2 _posicao;
         public bool Tiro;
-
-        //public int largura, altura, pos_origem
+        public bool DIREITA = true;
         public int largura, altura, pos_origemX, pos_origemY, pos_destinoX, pos_destinoY, frame;
 
         public void Initialize(int hp,Texture2D textura, Texture2D _healthBar, Vector2 posicao, int ms)
@@ -74,6 +73,7 @@ namespace Emo
 
             if (kbs.IsKeyDown(Keys.Left))
             {
+                DIREITA = false;
                 _posicao.X -= _moveSpeed;
 
                 pos_origemX = frame * largura;
@@ -88,6 +88,7 @@ namespace Emo
 
             if (kbs.IsKeyDown(Keys.Right))
             {
+                DIREITA = true;
                 _posicao.X += _moveSpeed;
 
                 pos_origemX = frame * largura;
@@ -102,18 +103,11 @@ namespace Emo
             if (kbs.IsKeyDown(Keys.Space)) { Fire(true); }
             if (kbs.IsKeyUp(Keys.Space)) { Fire(false); }
 
-            //_posicao.X = MathHelper.Clamp(_posicao.X, 0, 800 - _textura.Width);
-            //_posicao.Y = MathHelper.Clamp(_posicao.Y, 0, 600 - _textura.Height);
-
             _posicao.X = MathHelper.Clamp(_posicao.X, 0, 800 - largura);
             _posicao.Y = MathHelper.Clamp(_posicao.Y, 0, 600 - altura);
 
-            //seta_destino.X = (int)MathHelper.Clamp(_posicao.X, 0, 800 - largura);
-
             seta_destino.X = (int)_posicao.X;
 
-            //seta_destino.X = pos_destinoX;
-            //seta_destino.X = pos_destinoX;
             seta_origem.X = pos_origemX;
             seta_origem.Y = pos_origemY;
 
