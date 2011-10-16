@@ -12,40 +12,62 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Emo
 {
-    class Shoot
+    class Shoot : Animation
     {
-        public Vector2 _position;
-        public bool _active;
-        public int _damage;
-        public Animation _tiro;
-        Viewport _viewport;
-        float _projectileMoveSpeed;
+        #region Declarations
 
+        private Texture2D texture;
+        public int Damage;
+        float bulletMoveSpeed;
+        private Vector2 position;
+        bool DIREITA;
 
+        #endregion
 
-         public void Initialize(Viewport viewport, Vector2 position, Animation tiroani)
-         {
+        #region Constructor
 
-             _tiro = tiroani;
-            _position = position;
-           this._viewport = viewport;
-
-           _active = true;
-           _damage = 50;
-
-           _projectileMoveSpeed = 20f;
-        }
-        public void Update(GameTime gt)
+        public Shoot(Texture2D texture, Vector2 position,
+                                int frameWidth, int frameHeight, int frameCount,
+                               int frametime, Color color, float scale, bool looping, bool DIREITA)
+            : base(texture, position,
+                                frameWidth, frameHeight, frameCount,
+                                frametime, color, scale, looping)
         {
-            _position.X += _projectileMoveSpeed;
-            _tiro.Update(gt);
-            if (_position.X + 75 > _viewport.Width)
-                _active = false;
+
+            this.texture = texture;
+            Position = position;
+            Active = true;
+            Damage = 5;
+            bulletMoveSpeed = 20.0f;
+            color = Color.White;
+            this.DIREITA = DIREITA;
 
         }
-        public void Draw(SpriteBatch sb)
+
+        #endregion
+
+        #region Update and Draw
+
+        public void Update(GameTime gameTime)
         {
-            
+            if (DIREITA)
+            {
+                Position.X += bulletMoveSpeed;
+            }
+            else
+            {
+                Position.X -= bulletMoveSpeed;
+            }
+
+            base.Update(gameTime);
         }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            base.Draw(spriteBatch);
+        }
+
+        #endregion
+
     }
 }
