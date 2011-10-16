@@ -21,6 +21,7 @@ namespace Emo
         float bulletMoveSpeed;
         private Vector2 position;
         bool DIREITA;
+        Viewport viewport;
 
         #endregion
 
@@ -28,7 +29,7 @@ namespace Emo
 
         public Shoot(Texture2D texture, Vector2 position,
                                 int frameWidth, int frameHeight, int frameCount,
-                               int frametime, Color color, float scale, bool looping, bool DIREITA)
+                               int frametime, Color color, float scale, bool looping, bool DIREITA, Viewport viewport)
             : base(texture, position,
                                 frameWidth, frameHeight, frameCount,
                                 frametime, color, scale, looping)
@@ -41,6 +42,7 @@ namespace Emo
             bulletMoveSpeed = 20.0f;
             color = Color.White;
             this.DIREITA = DIREITA;
+            this.viewport = viewport;
 
         }
 
@@ -58,6 +60,9 @@ namespace Emo
             {
                 Position.X -= bulletMoveSpeed;
             }
+
+            if(Position.X + texture.Width /2 > viewport.Width + 100)
+                Active = false;
 
             base.Update(gameTime);
         }

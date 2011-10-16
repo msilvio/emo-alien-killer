@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animation.cs" />
+    <Compile Include="Background.cs" />
     <Compile Include="BaseEnemy.cs" />
     <Compile Include="BaseHero.cs" />
     <Compile Include="Health.cs" />

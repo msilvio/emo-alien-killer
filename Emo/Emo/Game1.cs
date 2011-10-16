@@ -18,6 +18,7 @@ namespace Emo
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        SpriteFont arial;
 
         Texture2D edKillers;
         BaseHero _eddie;
@@ -32,16 +33,15 @@ namespace Emo
 
         List<Shoot> shoots;
 
-        Animation machado;
-
         enum Telas 
         {
-            INTRO, MENU, FASE1
+            INTRO, MENU, FASE1, FASE2, FASE3
         };
 
         Telas tela_atual = Telas.FASE1; //Telas tela_atual = Telas.INTRO;
         Texture2D telaIntro;
         Texture2D telaMenu;
+        Background backGround;
 
         KeyboardState teclado;
 
@@ -65,6 +65,9 @@ namespace Emo
 
             Window.Title = "Emo Alien Killer";
             IsMouseVisible = false;
+            graphics.PreferredBackBufferWidth = 800;
+            graphics.PreferredBackBufferHeight = 480;
+            graphics.ApplyChanges();
 
             _eddie = new BaseHero();
 
@@ -86,17 +89,20 @@ namespace Emo
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             edKillers = Content.Load<Texture2D>("eddie1");
-            _posicaoPlayer = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X, 
+            _posicaoPlayer = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X,
                                         GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
+
             _eddie.Initialize(
                 500,
                 edKillers,
                 Content.Load<Texture2D>("eddie1"),
-                _posicaoPlayer, 6);
+                _posicaoPlayer, 2);
 
             telaIntro = Content.Load<Texture2D>("telaintro");
             telaMenu = Content.Load<Texture2D>("telamenu");
             fundo = Content.Load<Texture2D>("Fundo_Fase01");
+
+            arial = Content.Load<SpriteFont>("arial");
 
         }
 
@@ -147,6 +153,11 @@ namespace Emo
                 case Telas.FASE1:
                     _eddie.update(teclado, gameTime);
                     onPlay = true;
+                    // carregar fundo correspondente a fase
+                    fundo = Content.Load<Texture2D>("Fundo_Fase03");
+                    backGround = new Background(GraphicsDevice.Viewport,
+                                    fundo, new Vector2(0, 0), _eddie._moveSpeed, _eddie.DIREITA);
+
                     if (gameTime.TotalGameTime - previousFireTime > fireTime)
                     {
                         previousFireTime = gameTime.TotalGameTime;
@@ -156,11 +167,20 @@ namespace Emo
                             AddBullet(_eddie._posicao);
                         }
                     }
-            
                     break;
+
+                case Telas.FASE2:
+
+                    break;
+
+                case Telas.FASE3:
+
+                    break;
+                    
             }
             tecladoAnterior = teclado;
             UpdateBullet(gameTime);
+            backGround.Update(gameTime, _eddie._posicao);
 
             base.Update(gameTime);
         }
@@ -172,7 +192,8 @@ namespace Emo
             float meio = _eddie.largura / 2;
             Shoot shoot = new Shoot(textura_Axe, 
                                     _eddie._posicao + new Vector2(meio, 0), 
-                                    42, 42, 4, 90, Color.White, 1.0f, true, _eddie.DIREITA); 
+                                    42, 42, 4, 90, Color.White, 1.0f, true, 
+                                    _eddie.DIREITA, GraphicsDevice.Viewport); 
             shoots.Add(shoot);
         }
 
@@ -210,15 +231,37 @@ namespace Emo
                     spriteBatch.Draw(telaMenu, Vector2.Zero, Color.White);
                     break;
                 case Telas.FASE1:
-                    spriteBatch.Draw(fundo, Vector2.Zero, null, Color.White, 
-                                    0.0f, Vector2.Zero, 2.1f, SpriteEffects.None, 1.0f);
+                    // retirar apos concluída a class Background
+                    //spriteBatch.Draw(fundo, Vector2.Zero, null, Color.White, 
+                    //                0.0f, Vector2.Zero, 2.1f, SpriteEffects.None, 1.0f);
+                    // desenhar fundo conforme a fase
+                    backGround.Draw(spriteBatch);
+
                     _eddie.Draw(spriteBatch);
+
+                    spriteBatch.DrawString(arial,
+                                        "eddie_width: " + _eddie.largura +
+                                        "  eddie_posicao: " + _eddie._posicao +
+                                        "\nviewport" + GraphicsDevice.Viewport +
+                                        "\nfundo_width " + backGround.fundo_imagem.Bounds +
+                                        "\nquadro_lenth " + backGround.fundo_quadro.Length()
+                                        ,
+                                        Vector2.Zero,
+                                        Color.White);
 
                     for (int i = 0; i < shoots.Count; i++)
                     {
                         shoots[i].Draw(spriteBatch);
                         
                     }
+                    break;
+
+                case Telas.FASE2:
+
+                    break;
+
+                case Telas.FASE3:
+
                     break;
             }
 

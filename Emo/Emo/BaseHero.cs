@@ -15,7 +15,7 @@ namespace Emo
     {
         private Health _heroHealth;
         private Texture2D _textura;
-        private int _moveSpeed;
+        public int _moveSpeed;
         Rectangle seta_destino, seta_origem;
         public Vector2 _posicao;
         public bool Tiro;
