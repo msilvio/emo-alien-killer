@@ -82,6 +82,33 @@
       <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase01.xnb</Output>
       <Time>2011-10-15T23:03:16.9930651-03:00</Time>
     </Item>
+    <Item>
+      <Source>Fundo_Fase02.png</Source>
+      <Name>Fundo_Fase02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase02.xnb</Output>
+      <Time>2011-10-15T23:03:17.0242652-03:00</Time>
+    </Item>
+    <Item>
+      <Source>Fundo_Fase03.png</Source>
+      <Name>Fundo_Fase03</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase03.xnb</Output>
+      <Time>2011-10-15T23:03:17.0710653-03:00</Time>
+    </Item>
+    <Item>
+      <Source>arial.spritefont</Source>
+      <Name>arial</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\arial.xnb</Output>
+      <Time>2011-10-11T22:58:48.2328475-03:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

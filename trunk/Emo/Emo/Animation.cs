@@ -17,7 +17,6 @@ namespace Emo
         // The image representing the collection of images used for animation
         public Texture2D spriteStrip;
 
-
         // The scale used to display the sprite strip
         float scale;
 
