@@ -1,0 +1,21 @@
+            spriteBatch.DrawString(arial,
+                "eddie_posicao: " + _eddie._posicao +
+                "\nweapon_posicao: " + weapon_posicao +
+                "\nweapon_origem: " + weapon_origem +
+                "\nweapon_angulo: " + weapon_angulo +
+                "\nweapon_power: " + weapon_power +
+                "\nhipotenusa: X: " +  hipotenusa.X + " Y: "  + hipotenusa.Y +                
+                "\ntarget_posicao: " + target_posicao +
+                "\nwind: " + wind +
+                "\nweapon angulo\n" + 
+                weapon_angulo + "\n" +
+                MathHelper.ToDegrees(weapon_angulo)
+                ,
+                Vector2.Zero,
+                Color.Black);
+
+
+spriteBatch.DrawString(arial,
+                "eddie_posicao: " + _eddie._posicao,
+                Vector2.Zero,
+                Color.Black);

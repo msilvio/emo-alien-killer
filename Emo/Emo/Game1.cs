@@ -26,6 +26,7 @@ namespace Emo
         KeyboardState tecladoAnterior;
         Texture2D fundo;
         bool onPlay = false;
+        int moveSpeed = 2;
 
         TimeSpan previusSpawnTime;
         TimeSpan fireTime;
@@ -66,7 +67,7 @@ namespace Emo
             Window.Title = "Emo Alien Killer";
             IsMouseVisible = false;
             graphics.PreferredBackBufferWidth = 800;
-            graphics.PreferredBackBufferHeight = 480;
+            graphics.PreferredBackBufferHeight = 460;
             graphics.ApplyChanges();
 
             _eddie = new BaseHero();
@@ -96,7 +97,7 @@ namespace Emo
                 500,
                 edKillers,
                 Content.Load<Texture2D>("eddie1"),
-                _posicaoPlayer, 2);
+                _posicaoPlayer, moveSpeed);
 
             telaIntro = Content.Load<Texture2D>("telaintro");
             telaMenu = Content.Load<Texture2D>("telamenu");
@@ -191,7 +192,7 @@ namespace Emo
 
             float meio = _eddie.largura / 2;
             Shoot shoot = new Shoot(textura_Axe, 
-                                    _eddie._posicao + new Vector2(meio, 0), 
+                                    _eddie._posicao + new Vector2(meio, -30), 
                                     42, 42, 4, 90, Color.White, 1.0f, true, 
                                     _eddie.DIREITA, GraphicsDevice.Viewport); 
             shoots.Add(shoot);
