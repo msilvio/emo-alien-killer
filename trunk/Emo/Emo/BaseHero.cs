@@ -39,7 +39,8 @@ namespace Emo
             pos_destinoY = 0;
             frame = 0;
 
-            seta_destino = new Rectangle(0, 200, largura, altura);
+            //seta_destino = new Rectangle(0, 200, largura, altura);
+            seta_destino = new Rectangle(0, 170, largura, altura);
             seta_origem = new Rectangle(pos_origemX, pos_origemY, largura, altura);
         }
 
@@ -57,9 +58,8 @@ namespace Emo
         private void HandleGamepadInput(GamePadState gamePadState)
         {
             this._posicao +=
-                new Vector2(
-                    gamePadState.ThumbSticks.Left.X * 4,
-                    -gamePadState.ThumbSticks.Left.Y * 4);
+                new Vector2(gamePadState.ThumbSticks.Left.X * _moveSpeed, 0); // controle do GamePad travado em Y
+
             if (gamePadState.Buttons.A == ButtonState.Pressed)
             {
                 Fire(true);
