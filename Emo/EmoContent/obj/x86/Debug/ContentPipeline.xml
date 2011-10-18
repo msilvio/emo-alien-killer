@@ -109,6 +109,35 @@
       <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\arial.xnb</Output>
       <Time>2011-10-11T22:58:48.2328475-03:00</Time>
     </Item>
+    <Item>
+      <Source>Sounds\446285_A_Necessary_Evil.mp3</Source>
+      <Name>Sounds\446285_A_Necessary_Evil</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\446285_A_Necessary_Evil.xnb</Output>
+      <Extra>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\446285_A_Necessary_Evil.wma</Extra>
+      <Time>2011-10-17T22:25:45.6339622-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\450042_01___Resting_Place.mp3</Source>
+      <Name>Sounds\450042_01___Resting_Place</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\450042_01___Resting_Place.xnb</Output>
+      <Extra>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\450042_01___Resting_Place.wma</Extra>
+      <Time>2011-10-17T22:25:45.8055625-02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sounds\laserFire.wav</Source>
+      <Name>Sounds\laserFire</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\laserFire.xnb</Output>
+      <Time>2011-10-17T22:32:28.0806727-02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
