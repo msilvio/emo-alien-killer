@@ -34,12 +34,15 @@ namespace Emo
 
         List<Shoot> shoots;
 
+        Song gameplayMusic, menuMusic;
+        SoundEffect laserSound;
+
         enum Telas 
         {
             INTRO, MENU, FASE1, FASE2, FASE3
         };
 
-        Telas tela_atual = Telas.FASE1; //Telas tela_atual = Telas.INTRO;
+        Telas tela_atual = Telas.FASE1; //Telas tela_atual = Telas.INTRO; Telas tela_atual = Telas.FASE1;
         Texture2D telaIntro;
         Texture2D telaMenu;
         Background backGround;
@@ -77,6 +80,8 @@ namespace Emo
             fireTime = TimeSpan.FromSeconds(.15f);
             previusSpawnTime = TimeSpan.Zero;
 
+            
+
             base.Initialize();
         }
 
@@ -104,6 +109,15 @@ namespace Emo
             fundo = Content.Load<Texture2D>("Fundo_Fase01");
 
             arial = Content.Load<SpriteFont>("arial");
+
+            // Audio
+            gameplayMusic = Content.Load<Song>("Sounds/446285_A_Necessary_Evil");
+            menuMusic = Content.Load<Song>("Sounds/450042_01___Resting_Place");
+            laserSound = Content.Load<SoundEffect>("Sounds/laserFire");
+
+            PlayMusic(gameplayMusic); // colocar em funciomento depois de selecionada as musicas
+
+            //tela_atual = Telas.INTRO;
 
         }
 
@@ -146,25 +160,28 @@ namespace Emo
                     }
                     break;
                 case Telas.MENU:
+                    //PlayMusic(menuMusic);
                     if (teclado.IsKeyDown(Keys.Enter) && !tecladoAnterior.IsKeyDown(Keys.Enter))
                     {
                         tela_atual = Telas.FASE1;
                     }
                     break;
                 case Telas.FASE1:
+                    
                     _eddie.update(teclado, gameTime);
                     onPlay = true;
                     // carregar fundo correspondente a fase
                     fundo = Content.Load<Texture2D>("Fundo_Fase03");
                     backGround = new Background(GraphicsDevice.Viewport,
                                     fundo, new Vector2(0, 0), _eddie._moveSpeed, _eddie.DIREITA);
+                    //PlayMusic(gameplayMusic);
 
                     if (gameTime.TotalGameTime - previousFireTime > fireTime)
                     {
                         previousFireTime = gameTime.TotalGameTime;
                         if (_eddie.Tiro == true && onPlay == true) // if (player.Tiro == true) 
                         {
-                            //laserSound.Play();
+                            laserSound.Play();
                             AddBullet(_eddie._posicao);
                         }
                     }
@@ -211,7 +228,15 @@ namespace Emo
             }
         }
 
-
+        private void PlayMusic(Song song)
+        {
+            try
+            {
+                MediaPlayer.Play(song);
+                MediaPlayer.IsRepeating = true;
+            }
+            catch { }
+        }
 
 
         /// <summary>

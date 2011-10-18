@@ -122,3 +122,8 @@ M:\00XNA\15-10-11\Emo\Emo\obj\x86\Debug\Emo.pdb
 M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase02.xnb
 M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase03.xnb
 M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\arial.xnb
+M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\446285_A_Necessary_Evil.xnb
+M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\450042_01___Resting_Place.xnb
+M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\446285_A_Necessary_Evil.wma
+M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\450042_01___Resting_Place.wma
+M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\laserFire.xnb
