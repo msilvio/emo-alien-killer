@@ -32,6 +32,9 @@ namespace Emo
         TimeSpan fireTime;
         TimeSpan previousFireTime;
 
+        private float titleScreenTimer = 0.0f;
+        private float titleScreenDelayTime = 1.0f;
+
         List<Shoot> shoots;
 
         Song gameplayMusic, menuMusic;
@@ -106,7 +109,7 @@ namespace Emo
 
             telaIntro = Content.Load<Texture2D>("telaintro");
             telaMenu = Content.Load<Texture2D>("telamenu");
-            fundo = Content.Load<Texture2D>("Fundo_Fase01");
+            //fundo = Content.Load<Texture2D>("Fundo_Fase01"); // Trocar o fundo conforme a fase
 
             arial = Content.Load<SpriteFont>("arial");
 
@@ -115,9 +118,9 @@ namespace Emo
             menuMusic = Content.Load<Song>("Sounds/450042_01___Resting_Place");
             laserSound = Content.Load<SoundEffect>("Sounds/laserFire");
 
-            PlayMusic(gameplayMusic); // colocar em funciomento depois de selecionada as musicas
+            PlayMusic(menuMusic); // colocar em funciomento depois de selecionada as musicas
 
-            //tela_atual = Telas.INTRO;
+            tela_atual = Telas.INTRO;
 
         }
 
@@ -154,26 +157,65 @@ namespace Emo
             switch (tela_atual)
             {
                 case Telas.INTRO:
-                    if (teclado.IsKeyDown(Keys.Enter))
+                    // incluido para controla a execução inicial
+                    titleScreenTimer +=
+                        (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+                    if (titleScreenTimer >= titleScreenDelayTime)
                     {
-                        tela_atual = Telas.MENU;
+                        if ((Keyboard.GetState().IsKeyDown(Keys.Enter)) ||
+                            (GamePad.GetState(PlayerIndex.One).Buttons.A ==
+                            ButtonState.Pressed))
+                        {
+                            tela_atual = Telas.MENU;
+                            //PlayMusic(menuMusic);
+                        }
                     }
+                    //if (teclado.IsKeyDown(Keys.Enter))
+                    //{
+                    //    tela_atual = Telas.MENU;
+                    //}
                     break;
                 case Telas.MENU:
-                    //PlayMusic(menuMusic);
-                    if (teclado.IsKeyDown(Keys.Enter) && !tecladoAnterior.IsKeyDown(Keys.Enter))
+                     titleScreenTimer +=
+                        (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+                    if (titleScreenTimer >= titleScreenDelayTime)
                     {
-                        tela_atual = Telas.FASE1;
+                        if ((teclado.IsKeyDown(Keys.Enter) && !tecladoAnterior.IsKeyDown(Keys.Enter)) ||
+                            (GamePad.GetState(PlayerIndex.One).Buttons.A ==
+                            ButtonState.Pressed))
+                        {
+                            tela_atual = Telas.FASE1;
+                            PlayMusic(gameplayMusic);
+                            // carregar fundo correspondente a Fase 1
+                            fundo = Content.Load<Texture2D>("Fundo_Fase03");
+                            backGround = new Background(GraphicsDevice.Viewport,
+                                            fundo, new Vector2(0, 0), _eddie._moveSpeed, _eddie.DIREITA);
+                        }
                     }
+
+                    ////PlayMusic(menuMusic);
+                    //if (teclado.IsKeyDown(Keys.Enter) && !tecladoAnterior.IsKeyDown(Keys.Enter))
+                    //{
+                    //    tela_atual = Telas.FASE1;
+                    //    // carregar fundo correspondente a Fase 1
+                    //    fundo = Content.Load<Texture2D>("Fundo_Fase03");
+                    //    backGround = new Background(GraphicsDevice.Viewport,
+                    //                    fundo, new Vector2(0, 0), _eddie._moveSpeed, _eddie.DIREITA);
+                    //}
+
                     break;
                 case Telas.FASE1:
                     
                     _eddie.update(teclado, gameTime);
+
                     onPlay = true;
-                    // carregar fundo correspondente a fase
-                    fundo = Content.Load<Texture2D>("Fundo_Fase03");
-                    backGround = new Background(GraphicsDevice.Viewport,
-                                    fundo, new Vector2(0, 0), _eddie._moveSpeed, _eddie.DIREITA);
+                    // carregar fundo correspondente a fase - retirar
+                    //fundo = Content.Load<Texture2D>("Fundo_Fase03");
+                    //backGround = new Background(GraphicsDevice.Viewport,
+                    //                fundo, new Vector2(0, 0), _eddie._moveSpeed, _eddie.DIREITA);
+
                     //PlayMusic(gameplayMusic);
 
                     if (gameTime.TotalGameTime - previousFireTime > fireTime)
@@ -185,6 +227,7 @@ namespace Emo
                             AddBullet(_eddie._posicao);
                         }
                     }
+                    backGround.Update(gameTime, _eddie._posicao);
                     break;
 
                 case Telas.FASE2:
@@ -198,7 +241,7 @@ namespace Emo
             }
             tecladoAnterior = teclado;
             UpdateBullet(gameTime);
-            backGround.Update(gameTime, _eddie._posicao);
+            //backGround.Update(gameTime, _eddie._posicao);
 
             base.Update(gameTime);
         }
