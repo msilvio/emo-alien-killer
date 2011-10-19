@@ -164,7 +164,7 @@ namespace Emo
                     if (titleScreenTimer >= titleScreenDelayTime)
                     {
                         if ((Keyboard.GetState().IsKeyDown(Keys.Enter)) ||
-                            (GamePad.GetState(PlayerIndex.One).Buttons.A ==
+                            (GamePad.GetState(PlayerIndex.One).Buttons.X ==
                             ButtonState.Pressed))
                         {
                             tela_atual = Telas.MENU;
