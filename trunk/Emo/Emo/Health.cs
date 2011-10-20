@@ -7,12 +7,19 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework;
 
 namespace Emo
 {
     class Health
     {
-        private int _health;
+        public int _health;
+
+        //SpriteBatch mBatch; 
+        //Texture2D mHealthBar;
+
+        Viewport viewport;
 
         private Texture2D _healthBar;
 
@@ -21,17 +28,45 @@ namespace Emo
             set {_health = value; }
         }
 
-        public Health(Texture2D _healthBar) 
-        {
-            this._healthBar = _healthBar;
+        public Health(Texture2D mhealthBar, Viewport viewport) 
+        {           
+            this._healthBar = mhealthBar;
+            this.viewport = viewport;
         }
-
 
         public void Init() {
         }
 
-        public void Update() { }
+        public void Update(GameTime gameTime) 
+        {
+            KeyboardState mKeys = Keyboard.GetState();
+            if (mKeys.IsKeyDown(Keys.Up) == true)
+            {
+                _health += 1;
+            }
 
-        public void Draw() {}
+            if (mKeys.IsKeyDown(Keys.Down) == true)
+            {
+                _health -= 1;
+            }
+
+            _health = (int)MathHelper.Clamp(_health, 0, 100);
+
+        }
+
+        public void Draw(SpriteBatch spriteBatch) 
+        {
+            
+            //spriteBatch.Begin();
+            //spriteBatch.Draw(mHealthBar, new Rectangle(this.viewport.Width / 2 - mHealthBar.Width / 2,
+            //    30, mHealthBar.Width, 44), new Rectangle(0, 45, mHealthBar.Width, 44), Color.Red);
+
+            //spriteBatch.Draw(mHealthBar, new Rectangle(this.viewport.Width / 2 - mHealthBar.Width / 2,
+            //    30, mHealthBar.Width, 44), new Rectangle(0, 0, mHealthBar.Width, 44), Color.White);
+            //spriteBatch.End();
+
+            //base.Draw(mHealthBar, new Vector2(10, 10), null, Color.White,
+            //                0.0f, Vector2.Zero, 2.1f, SpriteEffects.None, 1.0f);
+        }
     }
 }

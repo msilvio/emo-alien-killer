@@ -101,6 +101,15 @@
       <Time>2011-10-15T23:03:17.0710653-03:00</Time>
     </Item>
     <Item>
+      <Source>healthBar.png</Source>
+      <Name>healthBar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\healthBar.xnb</Output>
+      <Time>2011-10-15T23:03:17.2270656-03:00</Time>
+    </Item>
+    <Item>
       <Source>arial.spritefont</Source>
       <Name>arial</Name>
       <Importer>FontDescriptionImporter</Importer>
