@@ -27,6 +27,7 @@ namespace Emo
         Texture2D fundo;
         bool onPlay = false;
         int moveSpeed = 2;
+        Texture2D mHealthBar;
 
         TimeSpan previusSpawnTime;
         TimeSpan fireTime;
@@ -102,10 +103,12 @@ namespace Emo
                                         GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
 
             _eddie.Initialize(
-                500,
+                100,
                 edKillers,
                 Content.Load<Texture2D>("eddie1"),
-                _posicaoPlayer, moveSpeed);
+                _posicaoPlayer, moveSpeed, GraphicsDevice.Viewport);
+
+            mHealthBar = Content.Load<Texture2D>("HealthBar");
 
             telaIntro = Content.Load<Texture2D>("telaintro");
             telaMenu = Content.Load<Texture2D>("telamenu");
@@ -164,11 +167,10 @@ namespace Emo
                     if (titleScreenTimer >= titleScreenDelayTime)
                     {
                         if ((Keyboard.GetState().IsKeyDown(Keys.Enter)) ||
-                            (GamePad.GetState(PlayerIndex.One).Buttons.X ==
+                            (GamePad.GetState(PlayerIndex.One).Buttons.Start ==
                             ButtonState.Pressed))
                         {
                             tela_atual = Telas.MENU;
-                            //PlayMusic(menuMusic);
                         }
                     }
                     //if (teclado.IsKeyDown(Keys.Enter))
@@ -183,7 +185,7 @@ namespace Emo
                     if (titleScreenTimer >= titleScreenDelayTime)
                     {
                         if ((teclado.IsKeyDown(Keys.Enter) && !tecladoAnterior.IsKeyDown(Keys.Enter)) ||
-                            (GamePad.GetState(PlayerIndex.One).Buttons.A ==
+                            (GamePad.GetState(PlayerIndex.One).Buttons.X ==
                             ButtonState.Pressed))
                         {
                             tela_atual = Telas.FASE1;
@@ -195,16 +197,6 @@ namespace Emo
                         }
                     }
 
-                    ////PlayMusic(menuMusic);
-                    //if (teclado.IsKeyDown(Keys.Enter) && !tecladoAnterior.IsKeyDown(Keys.Enter))
-                    //{
-                    //    tela_atual = Telas.FASE1;
-                    //    // carregar fundo correspondente a Fase 1
-                    //    fundo = Content.Load<Texture2D>("Fundo_Fase03");
-                    //    backGround = new Background(GraphicsDevice.Viewport,
-                    //                    fundo, new Vector2(0, 0), _eddie._moveSpeed, _eddie.DIREITA);
-                    //}
-
                     break;
                 case Telas.FASE1:
                     
@@ -215,7 +207,6 @@ namespace Emo
                     //fundo = Content.Load<Texture2D>("Fundo_Fase03");
                     //backGround = new Background(GraphicsDevice.Viewport,
                     //                fundo, new Vector2(0, 0), _eddie._moveSpeed, _eddie.DIREITA);
-
                     //PlayMusic(gameplayMusic);
 
                     if (gameTime.TotalGameTime - previousFireTime > fireTime)
@@ -311,6 +302,7 @@ namespace Emo
                     spriteBatch.DrawString(arial,
                                         "eddie_width: " + _eddie.largura +
                                         "  eddie_posicao: " + _eddie._posicao +
+                                        "  eddie_health:  " + _eddie._heroHealth +
                                         "\nviewport" + GraphicsDevice.Viewport +
                                         "\nfundo_width " + backGround.fundo_imagem.Bounds +
                                         "\nquadro_lenth " + backGround.fundo_quadro.Length()

@@ -13,19 +13,20 @@ namespace Emo
 {
     class BaseHero
     {
-        private Health _heroHealth;
+        public Health _heroHealth;
         private Texture2D _textura;
         public int _moveSpeed;
         Rectangle seta_destino, seta_origem;
         public Vector2 _posicao;
         public bool Tiro;
         public bool DIREITA = true;
+        Viewport viewport;
         public int largura, altura, pos_origemX, pos_origemY, pos_destinoX, pos_destinoY, frame;
 
-        public void Initialize(int hp,Texture2D textura, Texture2D _healthBar, Vector2 posicao, int ms)
+        public void Initialize(int hp,Texture2D textura, Texture2D _healthBar, Vector2 posicao, int ms, Viewport viewport)
         {
 
-            _heroHealth = new Health(_healthBar);
+            _heroHealth = new Health(_healthBar, viewport);
             _heroHealth.Healths = hp;
             _textura = textura;
             _posicao = posicao;
@@ -38,6 +39,7 @@ namespace Emo
             pos_destinoX = 0;
             pos_destinoY = 0;
             frame = 0;
+            this.viewport = viewport;
 
             //seta_destino = new Rectangle(0, 200, largura, altura);
             seta_destino = new Rectangle(0, 170, largura, altura);
@@ -48,6 +50,7 @@ namespace Emo
         {
 
             sb.Draw(_textura, seta_destino, seta_origem, Color.White);
+            _heroHealth.Draw(sb);
         }
 
         public void Fire(bool onShot)
@@ -70,6 +73,7 @@ namespace Emo
 
         public void update(KeyboardState kbs,GameTime gt) 
         {
+            _heroHealth.Update(gt);
 
             if (kbs.IsKeyDown(Keys.Left))
             {
