@@ -45,17 +45,20 @@ namespace Emo
         {
             if (DIREITA)
             {
-                if (heroPosition.X > 0)
+                if (heroPosition.X > 400)
                 {
-                    this.fundo_quadro.X = heroPosition.X;
-                    X += moveSpeed;
+                    this.fundo_quadro.X += moveSpeed;
+                    //X += moveSpeed;
                 }
                
             }
             else
             {
-                this.fundo_quadro.X = heroPosition.X;
-                X -= moveSpeed;
+                if (heroPosition.X < 100)
+                {
+                    this.fundo_quadro.X -= moveSpeed;
+                    //X += moveSpeed;
+                }
             }
         }
 

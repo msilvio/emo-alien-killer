@@ -16,8 +16,8 @@ namespace Emo
     {
         public int _health;
 
-        //SpriteBatch mBatch; 
-        //Texture2D mHealthBar;
+        SpriteBatch mBatch;
+        Texture2D mHealthBar;
 
         Viewport viewport;
 
@@ -56,7 +56,7 @@ namespace Emo
 
         public void Draw(SpriteBatch spriteBatch) 
         {
-            
+
             //spriteBatch.Begin();
             //spriteBatch.Draw(mHealthBar, new Rectangle(this.viewport.Width / 2 - mHealthBar.Width / 2,
             //    30, mHealthBar.Width, 44), new Rectangle(0, 45, mHealthBar.Width, 44), Color.Red);

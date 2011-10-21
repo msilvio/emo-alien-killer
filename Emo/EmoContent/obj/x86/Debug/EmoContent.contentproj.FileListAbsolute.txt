@@ -7,3 +7,4 @@ E:\00XNA\01-10-11\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
 K:\Seven\00XNA\01-10-11\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
 K:\Seven\00XNA\02-10-11\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
 M:\00XNA\15-10-11\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\00Silvio\Seven\XNA\21-10-11\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
