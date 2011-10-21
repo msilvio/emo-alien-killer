@@ -124,6 +124,7 @@ namespace Emo
             PlayMusic(menuMusic); // colocar em funciomento depois de selecionada as musicas
 
             tela_atual = Telas.INTRO;
+            //tela_atual = Telas.FASE1;
 
         }
 
@@ -218,7 +219,7 @@ namespace Emo
                             AddBullet(_eddie._posicao);
                         }
                     }
-                    backGround.Update(gameTime, _eddie._posicao);
+                    backGround.Update(gameTime, _eddie._posicao); // voltar quando inicia pelo menu principal
                     break;
 
                 case Telas.FASE2:
@@ -232,7 +233,7 @@ namespace Emo
             }
             tecladoAnterior = teclado;
             UpdateBullet(gameTime);
-            //backGround.Update(gameTime, _eddie._posicao);
+            // backGround.Update(gameTime, _eddie._posicao); // voltar quando iniciando pela FASE1
 
             base.Update(gameTime);
         }

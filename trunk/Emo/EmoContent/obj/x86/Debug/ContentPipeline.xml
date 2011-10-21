@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\setas.xnb</Output>
-      <Time>2011-10-15T23:03:17.1334654-03:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\setas.xnb</Output>
+      <Time>2011-10-21T14:35:50.8104403-02:00</Time>
     </Item>
     <Item>
       <Source>telaintro.png</Source>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\telaintro.xnb</Output>
-      <Time>2011-10-15T23:03:16.9462651-03:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\telaintro.xnb</Output>
+      <Time>2011-10-21T14:35:50.7480402-02:00</Time>
     </Item>
     <Item>
       <Source>telamenu.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\telamenu.xnb</Output>
-      <Time>2011-10-15T23:03:17.0086652-03:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\telamenu.xnb</Output>
+      <Time>2011-10-21T14:35:50.7792402-02:00</Time>
     </Item>
     <Item>
       <Source>eddiekillers.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\eddiekillers.xnb</Output>
-      <Time>2011-10-15T23:03:16.8838649-03:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\eddiekillers.xnb</Output>
+      <Time>2011-10-21T14:35:50.7168401-02:00</Time>
     </Item>
     <Item>
       <Source>background.png</Source>
@@ -43,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2011-10-15T23:03:17.1490654-03:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\background.xnb</Output>
+      <Time>2011-10-21T14:35:50.8260403-02:00</Time>
     </Item>
     <Item>
       <Source>eddiekillerscolors.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\eddiekillerscolors.xnb</Output>
-      <Time>2011-10-15T23:03:17.1958655-03:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\eddiekillerscolors.xnb</Output>
+      <Time>2011-10-21T14:35:50.8884404-02:00</Time>
     </Item>
     <Item>
       <Source>axe-sprite.png</Source>
@@ -61,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\axe-sprite.xnb</Output>
-      <Time>2011-10-15T23:03:17.1802655-03:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\axe-sprite.xnb</Output>
+      <Time>2011-10-21T14:35:50.8728404-02:00</Time>
     </Item>
     <Item>
       <Source>eddie1.png</Source>
@@ -70,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\eddie1.xnb</Output>
-      <Time>2011-10-15T23:03:17.2426656-03:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\eddie1.xnb</Output>
+      <Time>2011-10-21T14:35:50.9196405-02:00</Time>
     </Item>
     <Item>
       <Source>Fundo_Fase01.png</Source>
@@ -79,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase01.xnb</Output>
-      <Time>2011-10-15T23:03:16.9930651-03:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase01.xnb</Output>
+      <Time>2011-10-21T14:35:50.7792402-02:00</Time>
     </Item>
     <Item>
       <Source>Fundo_Fase02.png</Source>
@@ -88,8 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase02.xnb</Output>
-      <Time>2011-10-15T23:03:17.0242652-03:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase02.xnb</Output>
+      <Time>2011-10-21T14:35:50.7948402-02:00</Time>
     </Item>
     <Item>
       <Source>Fundo_Fase03.png</Source>
@@ -97,8 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase03.xnb</Output>
-      <Time>2011-10-15T23:03:17.0710653-03:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase03.xnb</Output>
+      <Time>2011-10-21T14:35:50.7948402-02:00</Time>
     </Item>
     <Item>
       <Source>healthBar.png</Source>
@@ -106,8 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\healthBar.xnb</Output>
-      <Time>2011-10-15T23:03:17.2270656-03:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\healthBar.xnb</Output>
+      <Time>2011-10-21T14:35:50.9040404-02:00</Time>
     </Item>
     <Item>
       <Source>arial.spritefont</Source>
@@ -115,8 +115,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\arial.xnb</Output>
-      <Time>2011-10-11T22:58:48.2328475-03:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\arial.xnb</Output>
+      <Time>2011-10-21T14:35:50.7168401-02:00</Time>
     </Item>
     <Item>
       <Source>Sounds\446285_A_Necessary_Evil.mp3</Source>
@@ -124,9 +124,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\446285_A_Necessary_Evil.xnb</Output>
-      <Extra>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\446285_A_Necessary_Evil.wma</Extra>
-      <Time>2011-10-17T22:25:45.6339622-02:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\446285_A_Necessary_Evil.xnb</Output>
+      <Extra>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\446285_A_Necessary_Evil.wma</Extra>
+      <Time>2011-10-21T14:35:49.6560382-02:00</Time>
     </Item>
     <Item>
       <Source>Sounds\450042_01___Resting_Place.mp3</Source>
@@ -134,9 +134,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\450042_01___Resting_Place.xnb</Output>
-      <Extra>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\450042_01___Resting_Place.wma</Extra>
-      <Time>2011-10-17T22:25:45.8055625-02:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\450042_01___Resting_Place.xnb</Output>
+      <Extra>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\450042_01___Resting_Place.wma</Extra>
+      <Time>2011-10-21T14:35:49.7496384-02:00</Time>
     </Item>
     <Item>
       <Source>Sounds\laserFire.wav</Source>
@@ -144,48 +144,48 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\laserFire.xnb</Output>
-      <Time>2011-10-17T22:32:28.0806727-02:00</Time>
+      <Output>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\Sounds\laserFire.xnb</Output>
+      <Time>2011-10-21T14:35:49.6716383-02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
-      <TargetProfile>HiDef</TargetProfile>
+      <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>M:\00XNA\15-10-11\Emo\EmoContent\</RootDirectory>
-      <LoggerRootDirectory>M:\00XNA\15-10-11\Emo\Emo\</LoggerRootDirectory>
-      <IntermediateDirectory>M:\00XNA\15-10-11\Emo\EmoContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>M:\00XNA\15-10-11\Emo\Emo\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\00Silvio\Seven\XNA\21-10-11\Emo\EmoContent\</RootDirectory>
+      <LoggerRootDirectory>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\00Silvio\Seven\XNA\21-10-11\Emo\EmoContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\00Silvio\Seven\XNA\21-10-11\Emo\Emo\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
         <Value>2010-08-23T12:41:18-03:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2011-02-22T21:46:11.9889594-03:00</Value>
+        <Key>C:\windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2011-07-12T14:17:47.236211-03:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

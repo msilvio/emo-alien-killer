@@ -79,6 +79,11 @@ namespace Emo
             {
                 DIREITA = false;
                 _posicao.X -= _moveSpeed;
+                //if (_posicao.X > 400)
+                //{
+                //    MoveBackgroundRight();
+                //    //X += moveSpeed;
+                //}
 
                 pos_origemX = frame * largura;
                 pos_origemY = altura;
@@ -117,6 +122,11 @@ namespace Emo
 
             HandleGamepadInput(GamePad.GetState(PlayerIndex.One));
 
+        }
+
+        private void MoveBackgroundRight()
+        {
+            throw new NotImplementedException();
         }
     }
 }
