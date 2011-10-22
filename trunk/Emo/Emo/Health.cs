@@ -21,7 +21,7 @@ namespace Emo
 
         Viewport viewport;
 
-        private Texture2D _healthBar;
+        //private Texture2D _healthBar;
 
         public int Healths{
             get { return _health; }
@@ -29,8 +29,8 @@ namespace Emo
         }
 
         public Health(Texture2D mhealthBar, Viewport viewport) 
-        {           
-            this._healthBar = mhealthBar;
+        {
+            this.mHealthBar = mhealthBar;
             this.viewport = viewport;
         }
 
@@ -58,11 +58,11 @@ namespace Emo
         {
 
             //spriteBatch.Begin();
-            //spriteBatch.Draw(mHealthBar, new Rectangle(this.viewport.Width / 2 - mHealthBar.Width / 2,
-            //    30, mHealthBar.Width, 44), new Rectangle(0, 45, mHealthBar.Width, 44), Color.Red);
+            spriteBatch.Draw(mHealthBar, new Rectangle(this.viewport.Width / 2 - mHealthBar.Width / 2,
+                30, mHealthBar.Width, 44), new Rectangle(0, 45, mHealthBar.Width, 44), Color.Red);
 
-            //spriteBatch.Draw(mHealthBar, new Rectangle(this.viewport.Width / 2 - mHealthBar.Width / 2,
-            //    30, mHealthBar.Width, 44), new Rectangle(0, 0, mHealthBar.Width, 44), Color.White);
+            spriteBatch.Draw(mHealthBar, new Rectangle(this.viewport.Width / 2 - mHealthBar.Width / 2,
+                30, mHealthBar.Width, 44), new Rectangle(0, 0, mHealthBar.Width, 44), Color.White);
             //spriteBatch.End();
 
             //base.Draw(mHealthBar, new Vector2(10, 10), null, Color.White,
