@@ -102,13 +102,13 @@ namespace Emo
             _posicaoPlayer = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X,
                                         GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
 
+            mHealthBar = Content.Load<Texture2D>("HealthBar");
+
             _eddie.Initialize(
                 100,
                 edKillers,
-                Content.Load<Texture2D>("eddie1"),
+                mHealthBar,
                 _posicaoPlayer, moveSpeed, GraphicsDevice.Viewport);
-
-            mHealthBar = Content.Load<Texture2D>("HealthBar");
 
             telaIntro = Content.Load<Texture2D>("telaintro");
             telaMenu = Content.Load<Texture2D>("telamenu");
