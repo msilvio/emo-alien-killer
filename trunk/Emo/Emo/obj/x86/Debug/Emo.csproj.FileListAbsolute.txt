@@ -201,3 +201,14 @@ C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\obj\x86\Debug\
 C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\obj\x86\Debug\Emo.exe
 C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\obj\x86\Debug\Emo.pdb
 C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Enemy.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase01.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase02.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase03.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\healthBar.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Enemy.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\arial.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Sounds\446285_A_Necessary_Evil.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Sounds\450042_01___Resting_Place.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Sounds\laserFire.xnb
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Sounds\446285_A_Necessary_Evil.wma
+C:\Users\devs173a\Desktop\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Sounds\450042_01___Resting_Place.wma
