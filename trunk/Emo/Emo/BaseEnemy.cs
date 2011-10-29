@@ -12,9 +12,62 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Emo
 {
-    class BaseEnemy
+    class BaseEnemy : Sprite
     {
-        private Health _heroHealth;
+        
+        protected float startHealth;
+        protected float currentHealth;
+
+        protected bool alive = true;
+
+        protected float speed = 0.5f;
+
+        public float CurrentHealth
+        {
+            get { return currentHealth; }
+            set { currentHealth = value; }
+        }
+
+        public float HealthPercentage
+        {
+            get { return currentHealth / startHealth; }
+        }
+
+        public bool IsDead
+        {
+            get { return currentHealth <= 0; }
+        }
+
+        public BaseEnemy(Texture2D texture, Vector2 position, float health, float speed)
+    : base(texture, position)
+{
+    this.startHealth = health;
+    this.currentHealth = startHealth;
+    this.speed = speed;
+}
+
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+
+            if (currentHealth <= 0)
+                alive = false;
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            if (alive)
+            {
+                // Muda a cor do inimigo até ele sumir/morrer
+                float healthPercentage = (float)currentHealth / (float)startHealth;
+
+                Color color = new Color(new Vector3(1 - healthPercentage,
+                    1 - healthPercentage, 1 - healthPercentage));
+
+                base.Draw(spriteBatch, color);
+            }
+        }
+        /*private Health _heroHealth;
         private Texture2D _textura;
         private int _moveSpeed;
         public Vector2 _posicao;
@@ -43,7 +96,7 @@ namespace Emo
 
             _posicao.X = MathHelper.Clamp(_posicao.X, 0, 800 - _textura.Width);
             _posicao.Y = MathHelper.Clamp(_posicao.Y, 0, 600 - _textura.Height);
-        }
+        }*/
 
     }
 }

@@ -176,3 +176,28 @@ D:\00XNA\22-10-11\Emo\Emo\obj\x86\Debug\ResolveAssemblyReference.cache
 D:\00XNA\22-10-11\Emo\Emo\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 D:\00XNA\22-10-11\Emo\Emo\obj\x86\Debug\Emo.exe
 D:\00XNA\22-10-11\Emo\Emo\obj\x86\Debug\Emo.pdb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\setas.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\telaintro.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\telamenu.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\eddiekillers.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\background.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\eddiekillerscolors.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\axe-sprite.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\eddie1.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase01.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase02.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Fundo_Fase03.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\healthBar.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\arial.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Sounds\446285_A_Necessary_Evil.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Sounds\450042_01___Resting_Place.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Sounds\laserFire.xnb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Sounds\446285_A_Necessary_Evil.wma
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Sounds\450042_01___Resting_Place.wma
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Emo.exe
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Emo.pdb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\obj\x86\Debug\Emo.exe
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\obj\x86\Debug\Emo.pdb
+C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\Emo\bin\x86\Debug\Content\Enemy.xnb

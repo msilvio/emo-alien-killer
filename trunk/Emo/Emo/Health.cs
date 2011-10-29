@@ -16,7 +16,6 @@ namespace Emo
     {
         public int _health;
 
-        SpriteBatch mBatch;
         Texture2D mHealthBar;
 
         Viewport viewport;
