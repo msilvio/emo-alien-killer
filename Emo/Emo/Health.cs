@@ -60,8 +60,10 @@ namespace Emo
             spriteBatch.Draw(mHealthBar, new Rectangle(this.viewport.Width / 2 - mHealthBar.Width / 2,
                 30, mHealthBar.Width, 44), new Rectangle(0, 45, mHealthBar.Width, 44), Color.Red);
 
-            spriteBatch.Draw(mHealthBar, new Rectangle(this.viewport.Width / 2 - mHealthBar.Width / 2,
-                30, mHealthBar.Width, 44), new Rectangle(0, 0, mHealthBar.Width, 44), Color.White);
+            spriteBatch.Draw(mHealthBar, new Rectangle(100, 100, (_health*mHealthBar.Width)/100, mHealthBar.Height), Color.White);
+
+            //spriteBatch.Draw(mHealthBar, new Rectangle(this.viewport.Width / 2 - mHealthBar.Width / 2,
+            //    30, mHealthBar.Width, 44), new Rectangle(0, 0, mHealthBar.Width, 44), Color.White);
             //spriteBatch.End();
 
             //base.Draw(mHealthBar, new Vector2(10, 10), null, Color.White,

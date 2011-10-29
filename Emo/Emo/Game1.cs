@@ -308,7 +308,7 @@ namespace Emo
                     _eddie.Draw(spriteBatch);
 
                     enemy1.Draw(spriteBatch);
-
+                    
                     spriteBatch.DrawString(arial,
                                         "eddie_width: " + _eddie.largura +
                                         "  eddie_posicao: " + _eddie._posicao +
