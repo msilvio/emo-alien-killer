@@ -23,6 +23,7 @@ namespace Emo
         Texture2D edKillers;
         BaseHero _eddie;
         Vector2 _posicaoPlayer;
+        BaseEnemy enemy1;
         KeyboardState tecladoAnterior;
         Texture2D fundo;
         bool onPlay = false;
@@ -101,6 +102,9 @@ namespace Emo
             edKillers = Content.Load<Texture2D>("eddie1");
             _posicaoPlayer = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X,
                                         GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
+            //criando um inimigo
+            Texture2D enemyTexture = Content.Load<Texture2D>("Enemy");
+            enemy1 = new BaseEnemy(enemyTexture,new  Vector2(500, GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2), 100, 0.5f);
 
             mHealthBar = Content.Load<Texture2D>("HealthBar");
 
@@ -235,6 +239,9 @@ namespace Emo
             UpdateBullet(gameTime);
             // backGround.Update(gameTime, _eddie._posicao); // voltar quando iniciando pela FASE1
 
+            enemy1.CurrentHealth -= 0.3f;
+            enemy1.Update(gameTime);
+
             base.Update(gameTime);
         }
 
@@ -299,6 +306,8 @@ namespace Emo
                     backGround.Draw(spriteBatch);
 
                     _eddie.Draw(spriteBatch);
+
+                    enemy1.Draw(spriteBatch);
 
                     spriteBatch.DrawString(arial,
                                         "eddie_width: " + _eddie.largura +
