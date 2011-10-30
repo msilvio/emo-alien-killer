@@ -26,7 +26,7 @@ namespace Emo
         public void Initialize(int hp,Texture2D textura, Texture2D _healthBar, Vector2 posicao, int ms, Viewport viewport)
         {
 
-            _heroHealth = new Health(_healthBar, viewport);
+            _heroHealth = new Health(_healthBar, viewport, posicao);
             _heroHealth.Healths = hp;
             _textura = textura;
             _posicao = posicao;
@@ -73,7 +73,7 @@ namespace Emo
 
         public void update(KeyboardState kbs,GameTime gt) 
         {
-            _heroHealth.Update(gt);
+            _heroHealth.Update(gt, this._posicao);
 
             if (kbs.IsKeyDown(Keys.Left))
             {
