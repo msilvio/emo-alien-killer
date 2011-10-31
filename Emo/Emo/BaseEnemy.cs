@@ -22,6 +22,8 @@ namespace Emo
 
         protected float speed = 0.5f;
 
+        public Health enemyHealth;
+
         public float CurrentHealth
         {
             get { return currentHealth; }
@@ -38,20 +40,28 @@ namespace Emo
             get { return currentHealth <= 0; }
         }
 
-        public BaseEnemy(Texture2D texture, Vector2 position, float health, float speed)
-    : base(texture, position)
-{
-    this.startHealth = health;
-    this.currentHealth = startHealth;
-    this.speed = speed;
-}
+        public BaseEnemy(Texture2D texture, Vector2 position, float health, float speed, Viewport viewport, Texture2D texturaBar)
+            : base(texture, position)
+        {
+            enemyHealth = new Health(texturaBar, viewport, position);
+            enemyHealth.Healths = (int)health;
+            this.startHealth = health;
+            this.currentHealth = startHealth;
+            this.speed = speed;
+            this.position = position;
+        }
 
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+            
+            enemyHealth.Update(gameTime, this.position);
 
+            enemyHealth._health = (int)CurrentHealth;
+            
             if (currentHealth <= 0)
                 alive = false;
+            
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -64,8 +74,11 @@ namespace Emo
                 Color color = new Color(new Vector3(1 - healthPercentage,
                     1 - healthPercentage, 1 - healthPercentage));
 
+                enemyHealth.Draw(spriteBatch);
+
                 base.Draw(spriteBatch, color);
             }
+
         }
         /*private Health _heroHealth;
         private Texture2D _textura;

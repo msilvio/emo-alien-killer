@@ -99,14 +99,15 @@ namespace Emo
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            mHealthBar = Content.Load<Texture2D>("HealthBar");
+
             edKillers = Content.Load<Texture2D>("eddie1");
             _posicaoPlayer = new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X,
                                         GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
             //criando um inimigo
             Texture2D enemyTexture = Content.Load<Texture2D>("Enemy");
-            enemy1 = new BaseEnemy(enemyTexture,new  Vector2(500, GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2), 100, 0.5f);
-
-            mHealthBar = Content.Load<Texture2D>("HealthBar");
+            enemy1 = new BaseEnemy(enemyTexture,new  Vector2(500, GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2), 
+                                        100, 0.5f, GraphicsDevice.Viewport, mHealthBar);
 
             _eddie.Initialize(
                 100,
@@ -239,7 +240,7 @@ namespace Emo
             UpdateBullet(gameTime);
             // backGround.Update(gameTime, _eddie._posicao); // voltar quando iniciando pela FASE1
 
-            enemy1.CurrentHealth -= 0.3f;
+            enemy1.CurrentHealth -= 0.2f; // decresce a vida do inimigo
             enemy1.Update(gameTime);
 
             base.Update(gameTime);
