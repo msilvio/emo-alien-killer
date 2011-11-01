@@ -106,8 +106,10 @@ namespace Emo
                                         GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2);
             //criando um inimigo
             Texture2D enemyTexture = Content.Load<Texture2D>("Enemy");
-            enemy1 = new BaseEnemy(enemyTexture,new  Vector2(500, GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height / 2), 
+            enemy1 = new BaseEnemy(enemyTexture,new  Vector2(500, GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height /3), 
                                         100, 0.5f, GraphicsDevice.Viewport, mHealthBar);
+
+            enemy1.CurrentHealth = 99.0f;
 
             _eddie.Initialize(
                 100,
@@ -238,9 +240,10 @@ namespace Emo
             }
             tecladoAnterior = teclado;
             UpdateBullet(gameTime);
+            UpdateCollision();
             // backGround.Update(gameTime, _eddie._posicao); // voltar quando iniciando pela FASE1
 
-            enemy1.CurrentHealth -= 0.2f; // decresce a vida do inimigo
+            //enemy1.CurrentHealth -= 0.2f; // decresce a vida do inimigo //  enemy1.CurrentHealth -= 0.2f
             enemy1.Update(gameTime);
 
             base.Update(gameTime);
@@ -281,6 +284,53 @@ namespace Emo
             catch { }
         }
 
+        private void UpdateCollision()
+        {
+            // controle de colisão
+            Rectangle rectangle1; // Player
+            Rectangle rectangle2; // Enemy
+            Rectangle rectangle3; // Bullet
+
+            rectangle1 = new Rectangle((int)_eddie._posicao.X,
+                                       (int)_eddie._posicao.Y,
+                                       _eddie.largura,
+                                       _eddie.altura);
+
+            // verifica se o inimigo está vivo
+            if (enemy1.alive == true)
+            {
+                rectangle2 = new Rectangle((int)enemy1.position.X,
+                                            (int)enemy1.position.Y,
+                                            enemy1.largura,
+                                            enemy1.altura);
+
+                if (rectangle1.Intersects(rectangle2))
+                {
+                    // dano sofrido pelo player na colisão com o enemy
+                    _eddie.hp -= enemy1.damage;
+                }
+
+                for (int i = 0; i < shoots.Count; i++)
+                {
+                    rectangle3 = new Rectangle((int)shoots[i].Position.X - shoots[i].largura / 2, 
+                                           (int)shoots[i].Position.Y - shoots[i].altura / 2, 
+                                           shoots[i].largura, 
+                                           shoots[i].altura);
+
+                    if (rectangle3.Intersects(rectangle2))
+                    {
+                        // dano sofrido pelo enemy na colisão com bullet
+                        enemy1.CurrentHealth -= (float)shoots[i].damage;
+                        shoots[i].Active = false;
+                    }
+
+                }
+            }
+
+
+
+                
+        }
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -313,7 +363,8 @@ namespace Emo
                     spriteBatch.DrawString(arial,
                                         "eddie_width: " + _eddie.largura +
                                         "  eddie_posicao: " + _eddie._posicao +
-                                        "  eddie_health:  " + _eddie._heroHealth +
+                                        "  eddie_health:  " + _eddie.hp +
+                                        "\nenemy health: " + enemy1.CurrentHealth +
                                         "\nviewport" + GraphicsDevice.Viewport +
                                         "\nfundo_width " + backGround.fundo_imagem.Bounds +
                                         "\nquadro_lenth " + backGround.fundo_quadro.Length()
