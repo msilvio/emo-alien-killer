@@ -17,7 +17,7 @@ namespace Emo
         #region Declarations
 
         private Texture2D texture;
-        public int Damage;
+        public int largura, altura, damage;
         float bulletMoveSpeed;
         private Vector2 position;
         bool DIREITA;
@@ -38,7 +38,9 @@ namespace Emo
             this.texture = texture;
             Position = position;
             Active = true;
-            Damage = 5;
+            damage = 5;
+            this.altura = texture.Width / 4;
+            this.largura = texture.Height;
             bulletMoveSpeed = 20.0f;
             color = Color.White;
             this.DIREITA = DIREITA;

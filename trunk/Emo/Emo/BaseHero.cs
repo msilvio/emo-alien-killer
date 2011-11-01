@@ -21,7 +21,7 @@ namespace Emo
         public bool Tiro;
         public bool DIREITA = true;
         Viewport viewport;
-        public int largura, altura, pos_origemX, pos_origemY, pos_destinoX, pos_destinoY, frame;
+        public int largura, altura, pos_origemX, pos_origemY, pos_destinoX, pos_destinoY, frame, hp;
 
         public void Initialize(int hp,Texture2D textura, Texture2D _healthBar, Vector2 posicao, int ms, Viewport viewport)
         {
@@ -31,6 +31,7 @@ namespace Emo
             _textura = textura;
             _posicao = posicao;
             _moveSpeed = ms;
+            this.hp = hp;
 
             largura = _textura.Width / 4;
             altura = _textura.Height / 2;
@@ -73,6 +74,7 @@ namespace Emo
 
         public void update(KeyboardState kbs,GameTime gt) 
         {
+            _heroHealth.Healths = this.hp;
             _heroHealth.Update(gt, this._posicao);
 
             if (kbs.IsKeyDown(Keys.Left))

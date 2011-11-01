@@ -18,11 +18,15 @@ namespace Emo
         protected float startHealth;
         protected float currentHealth;
 
-        protected bool alive = true;
+        public bool alive = true;
 
         protected float speed = 0.5f;
 
         public Health enemyHealth;
+
+        public int largura, altura, damage;
+
+        public Vector2 position;
 
         public float CurrentHealth
         {
@@ -49,6 +53,10 @@ namespace Emo
             this.currentHealth = startHealth;
             this.speed = speed;
             this.position = position;
+            this.damage = 1;
+
+            largura = texture.Width;
+            altura = texture.Height;
         }
 
         public override void Update(GameTime gameTime)

@@ -45,7 +45,7 @@ namespace Emo
         {
             if (DIREITA)
             {
-                if (heroPosition.X > 400)
+                if (heroPosition.X > 600)
                 {
                     this.fundo_quadro.X += moveSpeed;
                     //X += moveSpeed;
