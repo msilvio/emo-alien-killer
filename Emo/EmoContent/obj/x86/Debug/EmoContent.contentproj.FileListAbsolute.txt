@@ -12,3 +12,4 @@ D:\00XNA\22-10-11\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Fabio\Desktop\jogos\Seven Games\emo-alien-killer\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
 K:\Seven\00XNA\29-10-11\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
 M:\00XNA\31-10-11\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\00XNA\04-10-11\Emo\EmoContent\obj\x86\Debug\ResolveAssemblyReference.cache

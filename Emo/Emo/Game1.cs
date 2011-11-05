@@ -109,7 +109,7 @@ namespace Emo
             enemy1 = new BaseEnemy(enemyTexture,new  Vector2(500, GraphicsDevice.Viewport.TitleSafeArea.Y + GraphicsDevice.Viewport.TitleSafeArea.Height /3), 
                                         100, 0.5f, GraphicsDevice.Viewport, mHealthBar);
 
-            enemy1.CurrentHealth = 99.0f;
+            //enemy1.CurrentHealth = 99.0f;
 
             _eddie.Initialize(
                 100,
