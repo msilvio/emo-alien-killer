@@ -18,6 +18,7 @@ namespace Emo
         public int _moveSpeed;
         Rectangle seta_destino, seta_origem;
         public Vector2 _posicao;
+        public bool alive = true;
         public bool Tiro;
         public bool DIREITA = true;
         Viewport viewport;
@@ -41,6 +42,7 @@ namespace Emo
             pos_destinoY = 0;
             frame = 0;
             this.viewport = viewport;
+            this.alive = true;
 
             //seta_destino = new Rectangle(0, 200, largura, altura);
             seta_destino = new Rectangle(0, 170, largura, altura);

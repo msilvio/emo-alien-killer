@@ -44,7 +44,7 @@ namespace Emo
 
         enum Telas 
         {
-            INTRO, MENU, FASE1, FASE2, FASE3
+            INTRO, MENU, FASE1, FASE2, FASE3, GAMEOVER
         };
 
         Telas tela_atual = Telas.FASE1; //Telas tela_atual = Telas.INTRO; Telas tela_atual = Telas.FASE1;
@@ -210,6 +210,11 @@ namespace Emo
                     
                     _eddie.update(teclado, gameTime);
 
+                    if (_eddie.alive == false)
+                    {
+                        tela_atual = Telas.GAMEOVER;
+                    }
+
                     onPlay = true;
                     // carregar fundo correspondente a fase - retirar
                     //fundo = Content.Load<Texture2D>("Fundo_Fase03");
@@ -234,6 +239,10 @@ namespace Emo
                     break;
 
                 case Telas.FASE3:
+
+                    break;
+
+                case Telas.GAMEOVER:
 
                     break;
                     
@@ -308,6 +317,10 @@ namespace Emo
                 {
                     // dano sofrido pelo player na colisão com o enemy
                     _eddie.hp -= enemy1.damage;
+                    if (_eddie.hp <= 0) 
+                    { 
+                        _eddie.alive = false; 
+                    }
                 }
 
                 for (int i = 0; i < shoots.Count; i++)
@@ -338,7 +351,7 @@ namespace Emo
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
             spriteBatch.Begin();
             
             switch (tela_atual)
@@ -364,6 +377,7 @@ namespace Emo
                                         "eddie_width: " + _eddie.largura +
                                         "  eddie_posicao: " + _eddie._posicao +
                                         "  eddie_health:  " + _eddie.hp +
+                                        "  eddie-alive:   " + _eddie.alive +
                                         "\nenemy health: " + enemy1.CurrentHealth +
                                         "\nviewport" + GraphicsDevice.Viewport +
                                         "\nfundo_width " + backGround.fundo_imagem.Bounds +
@@ -384,6 +398,23 @@ namespace Emo
                     break;
 
                 case Telas.FASE3:
+
+                    break;
+
+                case Telas.GAMEOVER:
+
+                    //spriteBatch.DrawString(arial,
+                    //                        "GAME OVER",
+                    //                        Vector2.Zero,
+                    //                        Color.White);
+
+                    spriteBatch.DrawString(
+                                            arial,
+                                            "GAME OVER",
+                                            new Vector2(
+                                            this.Window.ClientBounds.Width / 2 -
+                                            arial.MeasureString("GAME OVER").X / 2,
+                                            250), Color.White);
 
                     break;
             }
